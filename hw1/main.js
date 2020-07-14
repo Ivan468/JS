@@ -76,3 +76,6 @@ const even = (n) => !(n % 2); //виводжу парне число
 console.info(even(sum)); //виводжу парне число s і це правда
 
 Math.ceil10(-59, 1); // -50
+
+let meanMath = math.mean(kivi, apples, bananas);//mean СЕРЕДНЄ число
+console.log(meanMath.toFixed(2)); //виводить СЕРЕДНЄ число із 2 дробами після коми наприклда 76.63
