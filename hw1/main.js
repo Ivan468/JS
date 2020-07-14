@@ -4,11 +4,14 @@ let apples = 90.2345;
 
 let massive = [bananas, kivi, apples]; //створюємо масив
 
-console.log(Math.max(...massive)); //виводимо максимальне і мінімальне число із масиву
-console.log(Math.min(...massive));
+console.log(`${Math.max(...massive)} ціна найдорожчого товару`); //виводимо максимальне і мінімальне число із масиву
+console.log(`${Math.min(...massive)} ціна найдешевшого товару  `);
 
 let sum = bananas + kivi + apples; //вивести суму із 3х товарів
-console.log(sum);
+console.log(`${sum} сума всіх покупок`);
+
+let meanMath = (kivi + apples + bananas) / 3;
+console.log(`${meanMath.toFixed(2)} середнэ число`);
 
 bananas = Math.floor(bananas); //округелння
 kivi = Math.floor(kivi); //округелння
@@ -16,7 +19,7 @@ apples = Math.floor(apples); //округелння
 
 sum = bananas + kivi + apples; //сума округлення
 
-console.log(sum);
+console.log(`${sum} округлення`);
 
 (function () {
   /**
@@ -67,15 +70,29 @@ console.log(sum);
 })();
 
 // Округлення
-console.log(Math.ceil10(sum, 2)); ///
+console.log(`${Math.ceil10(sum, 2)} округлення до більшого`); ///
 
 let rest = 500 - sum;
-console.info(rest); // віднімаю суму від 500 гривень і виходить 272
+console.info(
+  `${rest} якщо у клієнта 500 грн і він потратив суму пораховану вище`
+); // віднімаю суму від 500 гривень і виходить 272
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+let randomDiscount = getRandomInt(15); // отримуємо випадкову знижку
+console.log(randomDiscount);
+
+let result = (kivi / 100) * randomDiscount; //вычисление процентов
+console.log(randomDiscount + "% от " + kivi + " будет " + result);
+
+let cost = kivi / 2;
+
+let netProfit = cost - result;
+console.log(`${netProfit} - чистий прибуток`);
 
 const even = (n) => !(n % 2); //виводжу парне число
 console.info(even(sum)); //виводжу парне число s і це правда
 
 Math.ceil10(-59, 1); // -50
-
-let meanMath = math.mean(kivi, apples, bananas);//mean СЕРЕДНЄ число
-console.log(meanMath.toFixed(2)); //виводить СЕРЕДНЄ число із 2 дробами після коми наприклда 76.63
