@@ -22,58 +22,14 @@ sum = Math.floor(BANANAS + KIVI + APPLES); //сума округлення
 
 console.log(`${sum} округлення`);
 
-(function () {
-  /**
-   * Десяткове округлення числа до необхідної точності.
-   *
-   * @param {String}  type  Тип округлення.
-   * @param {Number}  value Число.
-   * @param {Integer} exp   Степінь (десятковий логарифм від основи округлення).
-   * @returns {Number} Округлене число.
-   */
-  function decimalAdjust(type, value, exp) {
-    // Якщо exp невизначений або дорівнює нулю...
-    if (typeof exp === "undefined" || +exp === 0) {
-      return Math[type](value);
-    }
-    value = +value;
-    exp = +exp;
-    // Якщо value не є числом, або ж степінь exp не являється цілим...
-    if (isNaN(value) || !(typeof exp === "number" && exp % 1 === 0)) {
-      return NaN;
-    }
-    // Зсув
-    value = value.toString().split("e");
-    value = Math[type](+(value[0] + "e" + (value[1] ? +value[1] - exp : -exp)));
-    // Зворотній зсув
-    value = value.toString().split("e");
-    return +(value[0] + "e" + (value[1] ? +value[1] + exp : exp));
-  }
-
-  // Десяткове округлення
-  if (!Math.round10) {
-    Math.round10 = function (value, exp) {
-      return decimalAdjust("round", value, exp);
-    };
-  }
-  // Десяткове округлення до меншого
-  if (!Math.floor10) {
-    Math.floor10 = function (value, exp) {
-      return decimalAdjust("floor", value, exp);
-    };
-  }
-  // Десяткове округлення до більшого
-  if (!Math.ceil10) {
-    Math.ceil10 = function (value, exp) {
-      return decimalAdjust("ceil", value, exp);
-    };
-  }
-})();
+function MyRound100(val) {
+  return Math.round(val / 100) * 100;
+}
+const priceTotalRounded = MyRound100(sum);
+console.log("The total price rounded to hundreds is: " + priceTotalRounded);
 
 // Округлення
-console.log(`${Math.ceil10(sum, 2)} округлення до більшого`); ///
-
-
+console.log(`${MyRound100(sum)} округлення до більшого`); ///
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
@@ -94,5 +50,3 @@ console.log(`${netProfit.toFixed(2)} - чистий прибуток`);
 
 const even = (n) => !(n % 2); //виводжу парне число
 console.info(even(sum)); //виводжу парне число s і це правда
-
-Math.ceil10(-59, 1); // -50
