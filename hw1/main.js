@@ -2,7 +2,7 @@ const BANANAS = 15.678;
 const KIVI = 123.965;
 const APPLES = 90.2345;
 
-let massive = [BANANAS, kivi, APPLES]; //створюємо масив
+let massive = [BANANAS, KIVI, APPLES]; //створюємо масив
 
 console.log(`${Math.max(...massive)} ціна найдорожчого товару`); //виводимо максимальне і мінімальне число із масиву
 console.log(`${Math.min(...massive)} ціна найдешевшого товару  `);
