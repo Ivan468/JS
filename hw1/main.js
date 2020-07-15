@@ -1,23 +1,19 @@
-let bananas = 15.678;
-let kivi = 123.965;
-let apples = 90.2345;
+const BANANAS = 15.678;
+const KIVI = 123.965;
+const APPLES = 90.2345;
 
-let massive = [bananas, kivi, apples]; //створюємо масив
+let massive = [BANANAS, kivi, APPLES]; //створюємо масив
 
 console.log(`${Math.max(...massive)} ціна найдорожчого товару`); //виводимо максимальне і мінімальне число із масиву
 console.log(`${Math.min(...massive)} ціна найдешевшого товару  `);
 
-let sum = bananas + kivi + apples; //вивести суму із 3х товарів
+let sum = BANANAS + KIVI + APPLES; //вивести суму із 3х товарів
 console.log(`${sum} сума всіх покупок`);
 
-let meanMath = (kivi + apples + bananas) / 3;
+let meanMath = (KIVI + APPLES + BANANAS) / 3;
 console.log(`${meanMath.toFixed(2)} середнэ число`);
 
-bananas = Math.floor(bananas); //округелння
-kivi = Math.floor(kivi); //округелння
-apples = Math.floor(apples); //округелння
-
-sum = bananas + kivi + apples; //сума округлення
+sum = Math.floor(BANANAS + KIVI + APPLES); //сума округлення
 
 console.log(`${sum} округлення`);
 
@@ -82,15 +78,17 @@ function getRandomInt(max) {
 }
 
 let randomDiscount = getRandomInt(15); // отримуємо випадкову знижку
-console.log(randomDiscount);
+console.log(` ${randomDiscount}%  знижка `);
 
-let result = (kivi / 100) * randomDiscount; //вычисление процентов
-console.log(randomDiscount + "% от " + kivi + " будет " + result);
+let result = (KIVI / 100) * randomDiscount; //вычисление процентов
+console.log(
+  ` ${randomDiscount}% от ${KIVI.toFixed(2)} будет ${result.toFixed(2)}`
+);
 
-let cost = kivi / 2;
+let cost = KIVI / 2;
 
 let netProfit = cost - result;
-console.log(`${netProfit} - чистий прибуток`);
+console.log(`${netProfit.toFixed(2)} - чистий прибуток`);
 
 const even = (n) => !(n % 2); //виводжу парне число
 console.info(even(sum)); //виводжу парне число s і це правда
