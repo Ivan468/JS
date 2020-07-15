@@ -10,6 +10,11 @@ console.log(`${Math.min(...massive)} ціна найдешевшого това�
 let sum = BANANAS + KIVI + APPLES; //вивести суму із 3х товарів
 console.log(`${sum} сума всіх покупок`);
 
+let rest = 500 - sum;
+console.info(
+  `${rest} якщо у клієнта 500 грн і він потратив суму пораховану вище`
+); // віднімаю суму від 500 гривень і виходить 272
+
 let meanMath = (KIVI + APPLES + BANANAS) / 3;
 console.log(`${meanMath.toFixed(2)} середнэ число`);
 
@@ -68,10 +73,7 @@ console.log(`${sum} округлення`);
 // Округлення
 console.log(`${Math.ceil10(sum, 2)} округлення до більшого`); ///
 
-let rest = 500 - sum;
-console.info(
-  `${rest} якщо у клієнта 500 грн і він потратив суму пораховану вище`
-); // віднімаю суму від 500 гривень і виходить 272
+
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
@@ -82,7 +84,7 @@ console.log(` ${randomDiscount}%  знижка `);
 
 let result = (KIVI / 100) * randomDiscount; //вычисление процентов
 console.log(
-  ` ${randomDiscount}% от ${KIVI.toFixed(2)} будет ${result.toFixed(2)}`
+  ` ${randomDiscount}% від ${KIVI.toFixed(2)} буде ${result.toFixed(2)}`
 );
 
 let cost = KIVI / 2;
