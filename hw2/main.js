@@ -1,11 +1,15 @@
-let N = +prompt();
+let N = +prompt("ведіть перше число");
+let M = +prompt("ведіть друге число (більше за перше)");
+
+while (isNaN(N) || isNaN(M)) {
+  alert("Це не цифри!");
+  N = prompt("ведіть перше число");
+  M = prompt("ведіть друге число (більше за перше)");
+}
 
 N = Math.floor(N);
-
-let M = +prompt();
-
 M = Math.floor(M);
-
+//S = Math.floor(S);
 
 //  while (N === NaN || M === NaN ) {
 //    alert(`введіть числа а не букви!`);
@@ -17,14 +21,12 @@ M = Math.floor(M);
 //   alert(`введіть число а не букви`);
 //   M = +prompt();
 // }
- 
 
 while (M > 999999 || N > 999999) {
   alert(`введіть менші  числа за попередні`);
   N = +prompt();
   M = +prompt();
 }
- 
 
 while (N > M) {
   alert(`введіть більше число за попереднє`);
