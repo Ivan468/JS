@@ -34,5 +34,15 @@ function pow(base, exp) {
 }
 
 document.write(
-  `<b> Cтупінь числа - 2 в 10 степені </b> </br> ${pow(2,10)} </br>`
+  `<b> Cтупінь числа - 2 в 10 степені </b> </br> ${pow(2, 10)} </br>`
 );
+
+/////великі букви
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+document.write(
+  `<b>Великі букви</b> </br> ${capitalizeFirstLetter("іван")} </br>`
+);
+/////4 завдання
