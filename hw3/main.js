@@ -45,4 +45,17 @@ function capitalizeFirstLetter(string) {
 document.write(
   `<b>Великі букви</b> </br> ${capitalizeFirstLetter("іван")} </br>`
 );
-/////4 завдання
+/*////4 завдання Створити функцію, яка вираховує суму, 
+що залишається після оплати податку від зарабітньої 
+плати. (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805*/
+
+function podatok(pod, widsotok) {
+  // const a = pod;
+  pod = pod - (pod / 100) * widsotok;
+
+  return pod;
+}
+
+document.write(
+  `<b>Податок від 1000 грн буде </b> </br> ${podatok(1000, 19.5)} грн </br>`
+);
