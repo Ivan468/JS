@@ -20,7 +20,7 @@ function getMaxDigit(number) {
   return Math.max(...str);
 }
 document.write(
-  `<b> Найбільще число із 12349654567</b> </br> ${getMaxDigit(
+  `<hr/><b> Найбільще число із 12349654567</b> </br> ${getMaxDigit(
     "12349654567"
   )} </br>`
 );
@@ -34,7 +34,7 @@ function pow(base, exp) {
 }
 
 document.write(
-  `<b> Cтупінь числа - 2 в 10 степені </b> </br> ${pow(2, 10)} </br>`
+  `<hr/><b> Cтупінь числа - 2 в 10 степені </b> </br> ${pow(2, 10)} </br>`
 );
 
 /////великі букви
@@ -43,7 +43,7 @@ function capitalizeFirstLetter(string) {
 }
 
 document.write(
-  `<b>Великі букви</b> </br> ${capitalizeFirstLetter("іван")} </br>`
+  `<hr/><b>Великі букви</b> </br> ${capitalizeFirstLetter("іван")} </br>`
 );
 /*////4 завдання Створити функцію, яка вираховує суму, 
 що залишається після оплати податку від зарабітньої 
@@ -57,7 +57,10 @@ function podatok(pod, widsotok) {
 }
 
 document.write(
-  `<b>Податок від 1000 грн буде </b> </br> ${podatok(1000, 19.5)} грн </br>`
+  `<hr/><b>Податок від 1000 грн буде </b> </br> ${podatok(
+    1000,
+    19.5
+  )} грн </br>`
 );
 /////Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M. Приклад: getRandomNumber(1, 10) -> 5
 
@@ -67,7 +70,9 @@ function randomNumb(min, max) {
   return Math.floor(Math.random() * (max - min)) + min; //Включно з мінімальним та виключаючи максимальне значення
 }
 
-document.write(`<b>Випадкове число </b> </br> ${randomNumb(1, 10)}  </br>`);
+document.write(
+  `<hr/><b>Випадкове число </b> </br> ${randomNumb(1, 10)}  </br>`
+);
 
 ///
 
@@ -86,10 +91,10 @@ function count(str, symb) {
 }
 
 document.write(
-  `<b>Символ  а  повторяется    раз.  </b> </br> ${count(
-    "коли я був малий то рахував букви ОООООО",
+  `<hr/><b>Символ  "а" повторяется в реченні  "коли я був малий то рахував букви " ${count(
+    "коли я був малий то рахував букви ",
     "о"
-  )}  </br>`
+  )}  раз.  </b>    </br>`
 );
 
 // Створіть функцію, яка конвертує долари в
@@ -98,7 +103,6 @@ document.write(
 //2500 грн. або convertCurrency("2500UAH") -> 100$
 
 function convertCurrency(sum, currency) {
-
   currency = currency.toLowerCase();
 
   if (currency.includes(`uan`)) {
@@ -114,7 +118,46 @@ function convertCurrency(sum, currency) {
   return sum;
 }
 document.write(
-  `<b>Конвертацыя 2700 грн і 200 $ </b> </br>  ${convertCurrency(100, "$" )}  </br>
-  ${convertCurrency(100, "UAN" )}
+  `<hr/><b>Конвертацыя 100 грн і 100 $ </b> </br>  ${convertCurrency(
+    100,
+    "$"
+  )}  </br>
+  ${convertCurrency(100, "UAN")}
   `
 );
+
+// Створіть функцію генерації випадкового паролю (тільки числа),
+// довжина встановлюється користувачем або по замовчуванню = 8 символам.
+// Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124
+
+function getRandomPassword(long = 8) {
+  if (long == 8) {
+    random = randomNumb(99999999, 10000000);
+  } else if (long == 7) {
+    random = randomNumb(9999999, 1000000);
+  } else if (long == 6) {
+    random = randomNumb(999999, 100000);
+  } else if (long == 5) {
+    random = randomNumb(99999, 10000);
+  } else if (long == 4) {
+    random = randomNumb(9999, 1000);
+  } else if (long == 3) {
+    random = randomNumb(999, 100);
+  } else {
+    random = `неможливо згенерувати таку довжину пароля або невірно введені дані`;
+  }
+
+  return random;
+}
+
+document.write(
+  ` <hr/> </br><b>Згенерувати пароль на 8 цифр </b> -  ${getRandomPassword(
+    8
+  )}  </br>
+  <b>Згенерувати пароль на 5 цифр </b>  - ${getRandomPassword(5)}  </br>
+  <b>Згенерувати пароль на 2 цифри </b>  - ${getRandomPassword(2)}  </br>
+  `
+);
+//Створіть функцію, яка видаляє всі букви з речення. Приклад: deleteLetters('a', "blablabla") -> "blblbl"
+
+
