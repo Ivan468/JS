@@ -160,4 +160,45 @@ document.write(
 );
 //Створіть функцію, яка видаляє всі букви з речення. Приклад: deleteLetters('a', "blablabla") -> "blblbl"
 
+function remove_char(str, simbol) {
+  while (str.includes(simbol)) {
+    str = str.replace(simbol, "");
+  }
+  return str;
+}
 
+document.writeln(`<hr/> <b>Замінити у реченні  "<i>every hunter wishes to $ % ^ & * knowhhhh h</i>" літеру h - буде  </br></b>
+${remove_char("every hunter wishes to $ % ^ & * knowhhhh h", "h")} `);
+///
+function isPalindrome(str) {
+  let strNoSpace = str.replace(/\s/g, "");
+  var strReverse = strNoSpace.split("").reverse().join("");
+
+  if (strReverse.toLowerCase() === strNoSpace.toLowerCase()) {
+    return "так";
+  } else {
+    return "ніт";
+  }
+}
+document.writeln(`<hr/> <b>Чи є слово  мадам паліндромом?-  </b>
+${isPalindrome(
+  "мадам"
+)},</br> чи є слово <b>качка</b> паліндромом? - ${isPalindrome(
+  "качка"
+)} і "Я несу гусеня" - ${isPalindrome("Я несу гусеня")} .`);
+
+//deleteDuplicateLetter("Бісквіт був дуже ніжним")
+
+function deleteDuplicateLetter(sentenses) {
+  let str = sentenses.toLowerCase().split("");
+  let output = "";
+  for (let i = 0; i < str.length; i++) {
+    if (str.lastIndexOf(str[i]) == str.indexOf(str[i])) {
+      output = output + str[i];
+    }
+  }
+  return output;
+}
+
+document.writeln(`<hr/> <b>Видалити букви що повторюються-  </b>
+ ${deleteDuplicateLetter("Бісквіт був дуже ніжним")}.`);
