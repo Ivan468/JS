@@ -72,16 +72,49 @@ document.write(`<b>Випадкове число </b> </br> ${randomNumb(1, 10)}
 ///
 
 function count(str, symb) {
-   // var symb = "о", str = "Астрономия это наука о небесных объектах";
-   var str = str.toLowerCase();
-      for (var count = -1, index = 0; index != -1; count++, index = str.indexOf(symb, index + 1));
-    
-      return count;
-   
-    
-   // document.writeln(count(str, symb)) // 5
+  // var symb = "о", str = "Астрономия это наука о небесных объектах";
+  var str = str.toLowerCase();
+  for (
+    var count = -1, index = 0;
+    index != -1;
+    count++, index = str.indexOf(symb, index + 1)
+  );
+
+  return count;
+
+  // document.writeln(count(str, symb)) // 5
 }
- 
+
 document.write(
-  `<b>Символ  а  повторяется    раз.  </b> </br> ${count( 'коли я був малий то рахував букви ОООООО', 'о')}  </br>`
+  `<b>Символ  а  повторяется    раз.  </b> </br> ${count(
+    "коли я був малий то рахував букви ОООООО",
+    "о"
+  )}  </br>`
+);
+
+// Створіть функцію, яка конвертує долари в
+// гривні та навпаки в залежності від наявності символа $
+// або UAH в рядку. Приклад: convertCurrency("100$") ->
+//2500 грн. або convertCurrency("2500UAH") -> 100$
+
+function convertCurrency(sum, currency) {
+
+  currency = currency.toLowerCase();
+
+  if (currency.includes(`uan`)) {
+    sum = sum * 0.0358;
+  } else if (currency.includes(`$`)) {
+    sum = sum * 27;
+  } else if (currency.includes(" ")) {
+    console.log("ви ввели неправельний символ");
+  } else {
+    console.log("ви ввели неправельний символ");
+  }
+
+  return sum;
+}
+document.write(
+  `<b>Конвертацыя 2700 грн і 200 $ </b> </br>  ${convertCurrency(100, "$" )}  </br>
+  ${convertCurrency(100, "UAN" )}
+  `
 );
