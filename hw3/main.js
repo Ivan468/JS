@@ -1,20 +1,3 @@
-/////
-///
-////
-////
-////
-///
-///
-// function getMaxDigit(number) {
-//   console.log(number);
-// }
-
-// const str = "12658";
-
-// const words = str.split(" ");
-// console.log(Math.max(...str));
-
-/////
 function getMaxDigit(number) {
   const str = number;
   return Math.max(...str);
@@ -37,7 +20,6 @@ document.write(
   `<hr/><b> Cтупінь числа - 2 в 10 степені </b> </br> ${pow(2, 10)} </br>`
 );
 
-/////великі букви
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -45,12 +27,9 @@ function capitalizeFirstLetter(string) {
 document.write(
   `<hr/><b>Великі букви</b> </br> ${capitalizeFirstLetter("іван")} </br>`
 );
-/*////4 завдання Створити функцію, яка вираховує суму, 
-що залишається після оплати податку від зарабітньої 
-плати. (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805*/
 
 function podatok(pod, widsotok) {
-  // const a = pod;
+
   pod = pod - (pod / 100) * widsotok;
 
   return pod;
@@ -62,22 +41,18 @@ document.write(
     19.5
   )} грн </br>`
 );
-/////Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M. Приклад: getRandomNumber(1, 10) -> 5
 
 function randomNumb(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min; //Включно з мінімальним та виключаючи максимальне значення
+  return Math.floor(Math.random() * (max - min)) + min;
 }
 
 document.write(
   `<hr/><b>Випадкове число </b> </br> ${randomNumb(1, 10)}  </br>`
 );
 
-///
-
 function count(str, symb) {
-  // var symb = "о", str = "Астрономия это наука о небесных объектах";
   var str = str.toLowerCase();
   for (
     var count = -1, index = 0;
@@ -86,8 +61,6 @@ function count(str, symb) {
   );
 
   return count;
-
-  // document.writeln(count(str, symb)) // 5
 }
 
 document.write(
@@ -96,11 +69,6 @@ document.write(
     "о"
   )}  раз.  </b>    </br>`
 );
-
-// Створіть функцію, яка конвертує долари в
-// гривні та навпаки в залежності від наявності символа $
-// або UAH в рядку. Приклад: convertCurrency("100$") ->
-//2500 грн. або convertCurrency("2500UAH") -> 100$
 
 function convertCurrency(sum, currency) {
   currency = currency.toLowerCase();
@@ -125,10 +93,6 @@ document.write(
   ${convertCurrency(100, "UAN")}
   `
 );
-
-// Створіть функцію генерації випадкового паролю (тільки числа),
-// довжина встановлюється користувачем або по замовчуванню = 8 символам.
-// Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124
 
 function getRandomPassword(long = 8) {
   if (long == 8) {
@@ -158,7 +122,6 @@ document.write(
   <b>Згенерувати пароль на 2 цифри </b>  - ${getRandomPassword(2)}  </br>
   `
 );
-//Створіть функцію, яка видаляє всі букви з речення. Приклад: deleteLetters('a', "blablabla") -> "blblbl"
 
 function remove_char(str, simbol) {
   while (str.includes(simbol)) {
@@ -169,7 +132,7 @@ function remove_char(str, simbol) {
 
 document.writeln(`<hr/> <b>Замінити у реченні  "<i>every hunter wishes to $ % ^ & * knowhhhh h</i>" літеру h - буде  </br></b>
 ${remove_char("every hunter wishes to $ % ^ & * knowhhhh h", "h")} `);
-///
+
 function isPalindrome(str) {
   let strNoSpace = str.replace(/\s/g, "");
   var strReverse = strNoSpace.split("").reverse().join("");
@@ -180,14 +143,13 @@ function isPalindrome(str) {
     return "ніт";
   }
 }
+
 document.writeln(`<hr/> <b>Чи є слово  мадам паліндромом?-  </b>
 ${isPalindrome(
   "мадам"
 )},</br> чи є слово <b>качка</b> паліндромом? - ${isPalindrome(
   "качка"
 )} і "Я несу гусеня" - ${isPalindrome("Я несу гусеня")} .`);
-
-//deleteDuplicateLetter("Бісквіт був дуже ніжним")
 
 function deleteDuplicateLetter(sentenses) {
   let str = sentenses.toLowerCase().split("");
