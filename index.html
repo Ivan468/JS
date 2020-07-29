@@ -1,84 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        h1 {
-          font-size: 40px;
-          font-family: "Monaco", "Courier", monospace;
-          color: #618ad2;
-          grid-area: head;
-        }
-        .mat {
-          margin-bottom: 7px;
-        }
-        .one {
-          width: 186px;
-        }
-  
-        body {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-template-rows: 1fr 1fr 1fr;
-          row-gap: 20px;
-          grid-template:
-            "head head head "
-            "main  main main"
-            "foot  foot foot";
-        }
-  
-        main {
-     
-          grid-area: main;
-          display: grid;
-          gap: 10px;
-  
-          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-          grid-auto-flow: row;
-        }
-  
-        footer {
-          background-color: red;
-          grid-area: foot;
-        }
-      </style>
-</head>
+      h1 {
+        font-size: 40px;
+        font-family: "Monaco", "Courier", monospace;
+        color: #618ad2;
+        grid-area: head;
+      }
+      .mat {
+        margin-bottom: 7px;
+      }
+      .one {
+        width: 186px;
+      }
 
-<body>
+      body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        row-gap: 20px;
+        grid-template:
+          "head head head "
+          "main  main main"
+          "foot  foot foot";
+      }
+
+      main {
+        grid-area: main;
+        display: grid;
+        gap: 10px;
+
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-auto-flow: row;
+      }
+
+      footer {
+        background-color: red;
+        grid-area: foot;
+      }
+    </style>
+  </head>
+
+  <body>
     <h1>Homework Ivan Petrushchack</h1>
     <main>
-        <div class="mat">
-         
-          <a href="http://ivan468.github.io/cursor-git/">old Home works</a>
-        </div>
-  
-        <button
-          onclick="window.location.href = './hw1/';"
-          title="Homework"
-        >
-          Homework 1
-        </button>
-        <button onclick="window.location.href = './hw2/';" title="while">
-          Hw2 while
-        </button>
-        <button onclick="window.location.href = './hw3/';" title="Функції">
-          Hw3 Function
-        </button>
-        <button
-          onclick="window.location.href = './homework 4/';"
-          title="Функції"
-        >
-          Homework 4
-        </button>
-        <button
-          onclick="window.location.href = './homework 5/';"
-          title=" Блочна верстка"
-        ><!-- 
-          Homework 5
-        </button>
-  
+      <div class="mat">
+        <a href="http://ivan468.github.io/cursor-git/">old Home works</a>
+      </div>
+
+      <button onclick="window.location.href = './hw1/';" title="Homework">
+        Homework 1
+      </button>
+      <button onclick="window.location.href = './hw2/';" title="while">
+        Hw2 while
+      </button>
+      <button onclick="window.location.href = './hw3/';" title="Функції">
+        Hw3 Function
+      </button>
+      <button onclick="window.location.href = './hw4/';" title="Масив">
+        hw4 Масив 4
+      </button>
+      <button
+        onclick="window.location.href = './homework 5/';"
+        title=" Блочна верстка"
+      >
+        Homework 5
+      </button>
+      <!-- 
         <button
           onclick="window.location.href = './homework 6/';"
           title=" Flex and grid"
@@ -128,6 +120,6 @@
       >
         Homework 13 
       </button> -->
-      </main>
-</body>
+    </main>
+  </body>
 </html>
