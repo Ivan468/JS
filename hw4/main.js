@@ -13,7 +13,7 @@ function getPairs(arr) {
   let sumMassive = [];
   if (arr) {
     onePairs.push(arr[0], arr[2]);
-    twoPairs.push(arr[1], arr[3]);
+    twoPairs.push(arr[1], arr[3]); ///twoPairs.push(new Array(arr[1], arr[3]).join(" i "));
     threPairs.push(arr[4], arr[5]);
 
     sumMassive.push(onePairs, twoPairs, threPairs);
@@ -36,9 +36,9 @@ function getPairsAndThems(arr, arr2, randomF) {
   
 
   if (arr) {
-    onePairs.push(arr[0], arr[2], arr2[0]);
-    twoPairs.push(arr[1], arr[3], arr2[1]);
-    threPairs.push(arr[4], arr[5], arr2[2]);
+    onePairs.push( new Array(arr[0], arr[2]).join(" i "), arr2[0]);/// .push(new Array(arr[0], arr[2]).join(" i "));
+    twoPairs.push(new Array(arr[1], arr[3]).join(" i "), arr2[1]);////другий спосіб запушити з І
+    threPairs.push(new Array(arr[4], arr[5]).join(" i "), arr2[2]);
     sumMassive.push(onePairs, twoPairs, threPairs);
   } else {
     return console.log(`Error!`);
