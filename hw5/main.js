@@ -57,13 +57,21 @@ function filterEvenNumbers(...number) {
 
 console.log("Парні числа пропустити ", filterEvenNumbers(1, 2, 3, 4, 5, 6));
 
-//
+//Filter --- 6 - Більше за нуль
 
 function countPositiveNumbers(...number) {
    a =  number.filter((el) => el > 0);
      return a.length;
   }
 
-console.log("Кількість чисел ", countPositiveNumbers(1, -2, 3, -4, -5, 6)  )
-//
+console.log("Кількість чисел ", countPositiveNumbers(1, -2, 3, -4, -5, 6)  );
+//Filter --- 7 - ділення Фільтр тільки тих що діляться на 5
 
+ 
+
+
+function getDividedByFive(...number) {
+    return number.filter(num => num % 5 === 0)
+ }
+
+console.log ("Фільтр тільки тих що діляться на 5", getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
