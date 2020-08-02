@@ -59,4 +59,11 @@ console.log("Парні числа пропустити ", filterEvenNumbers(1, 
 
 //
 
+function countPositiveNumbers(...number) {
+   a =  number.filter((el) => el > 0);
+     return a.length;
+  }
+
+console.log("Кількість чисел ", countPositiveNumbers(1, -2, 3, -4, -5, 6)  )
+//
 
