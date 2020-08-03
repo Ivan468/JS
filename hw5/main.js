@@ -22,7 +22,7 @@ document.write(
 function average() {
   let sum = 0;
 
-  for (index = 0; index < arguments[index]; index++)
+  for (index = 0; index < arguments.length; index++)
     sum = sum + arguments[index];
 
   sum = sum / arguments.length;
@@ -31,8 +31,8 @@ function average() {
 }
 
 document.write(
-  "середнє арифметичне: із 10, 100, 10001, 15, 33 буде:  <b>",
-  average(10, 100, 10001, 15, 33),
+  "середнє арифметичне: із 6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2 буде:  <b>",
+  average(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2),
   " </b> <hr> <br>"
 );
 
