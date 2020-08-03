@@ -11,7 +11,11 @@ let getRandomArray = (length, min, max) => {
   return arrRandom.join(", ");
 };
 
-document.write("Рандомне число:  <b> ", getRandomArray(10, 2, 100), "  </b> <hr> <br>");
+document.write(
+  "Рандомне число:  <b> ",
+  getRandomArray(10, 2, 100),
+  "  </b> <hr> <br>"
+);
 
 // zavdannya 3
 
@@ -53,7 +57,7 @@ document.write(
   calcMedian(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2),
   "</b><hr> <br>"
 );
- 
+
 //Filter --- 5 arrRandom.join(", ")
 
 function filterEvenNumbers(...number) {
