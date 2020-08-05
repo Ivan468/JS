@@ -4,7 +4,10 @@ const students = [{
     subjects: {
       math: [4, 4, 3, 4],
       algorithms: [3, 3, 3, 4, 4, 4],
-      data_science: [5, 5, 3, 4]
+      data_science: [5, 5, 3, 4],
+      getOBj() {
+        return this;
+    },
     }
   }, {
     name: "Victor",
@@ -12,7 +15,10 @@ const students = [{
     subjects: {
       physics: [5, 5, 5, 3],
       economics: [2, 3, 3, 3, 3, 5],
-      geometry: [5, 5, 2, 3, 5]
+      geometry: [5, 5, 2, 3, 5],
+      getOBj() {
+          return this;
+      },
     }
   }, {
     name: "Anton",
@@ -20,9 +26,16 @@ const students = [{
     subjects: {
       statistics: [4, 5, 5, 5, 5, 3, 4, 3, 4, 5],
       english: [5, 3],
-      cosmology: [5, 5, 5, 5]
+      cosmology: [5, 5, 5, 5],
+      getOBj() {
+        return this;
+    },
     }
   }];
+
+  
+  ////ВИКОРИСТАТИ ЗИС!!!!!!!!!!!! який посилаэться на назви предментыв console.log(students[0].subjects) 
+///console.log(students[0].subjects.getOBj()) -  працює 
 
 //   Створіть функцію getSubjects(students[0] --> ["Math", "Algorithms", "Data science"] - 
 // яка повертає список предметів для конкретного студента. Зверніть увагу 
