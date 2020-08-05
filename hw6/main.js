@@ -5,9 +5,7 @@ const students = [{
       math: [4, 4, 3, 4],
       algorithms: [3, 3, 3, 4, 4, 4],
       data_science: [5, 5, 3, 4],
-      getOBj() {
-        return this;
-    },
+       
     }
   }, {
     name: "Victor",
@@ -16,9 +14,7 @@ const students = [{
       physics: [5, 5, 5, 3],
       economics: [2, 3, 3, 3, 3, 5],
       geometry: [5, 5, 2, 3, 5],
-      getOBj() {
-          return this;
-      },
+       
     }
   }, {
     name: "Anton",
@@ -27,9 +23,7 @@ const students = [{
       statistics: [4, 5, 5, 5, 5, 3, 4, 3, 4, 5],
       english: [5, 3],
       cosmology: [5, 5, 5, 5],
-      getOBj() {
-        return this;
-    },
+       
     }
   }];
 
@@ -41,8 +35,20 @@ const students = [{
 // яка повертає список предметів для конкретного студента. Зверніть увагу 
 // – назву предмету необхідно повертати з великої літери, а _ – замінити на пробіл
 
+function getSubjects(i) {
+
+  x = Object.assign(students[i].subjects);
+ x =  Object.keys(x) ;
+ x = x.join(', ')
+  
+ x = x.replace("_", " "); 
+ x = x.split(', ')
+//  x = (x[0].toUpperCase() + x.slice(1))
+ return console.log(x )
+}
 
 
+console.log(getSubjects(0))
 
 // Створіть функцію getAverageMark(students[0]) --> 3.79 – 
 // яка поверне середню оцінку по усім предметам для переданого студента НЕ МАСИВА СТУДЕНТІВ.
