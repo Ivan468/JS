@@ -70,8 +70,21 @@ function getAverageMark (stud) {
   let studen = Object.values(students[stud].subjects)
 
 
+// arr = [];
+ 
+   
+//   for(let j = 0; j < studen.length; j++) { 
+     
+//     sum = studen  +  studen ;
 
-console.log(studen)
+//    arr.push(sum);
+   
+let result = studen[0].reduce((sum, current) => sum + current);
+//   }
+
+result = result / studen[0].length ;
+
+console.log(result)
   // let result = studen.reduce((sum, current) => sum + current);
 
  
