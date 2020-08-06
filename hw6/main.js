@@ -37,28 +37,50 @@ const students = [{
 
 function getSubjects(i) {
 
-let  x = Object.assign(students[i].subjects);
- x =  Object.keys(x) ;
- x = x.join(', ')
+  let  x = Object.assign(students[i].subjects);
+   x =  Object.keys(x) ;
+    
+    x = x.map(element => {
+      if(element.includes('_')){
+        element = element.replace('_', ' ');
+      };
+      return element[0].toUpperCase() + element.slice(1);
+    });
   
- x = x.replace("_", " "); 
- x = x.split(', ')
+   return console.log(x);
+  }
+
  
-//  for (let i = 0; i < x.length; i++) {
-//    x[i] = x[i].toUpperCase() + x.slice(i);
-     
-//  }
+console.log(`перший студент ` );
+ getSubjects(0);
+ 
+console.log(`другий  студент  `);
+getSubjects(1);
 
-//  x = (x[0].toUpperCase() + x.slice(1))
- return console.log(x)
-}
-
-
-console.log(getSubjects(0))
-
+console.log(`третій студент  `);
+getSubjects(2);
 // Створіть функцію getAverageMark(students[0]) --> 3.79 – 
 // яка поверне середню оцінку по усім предметам для переданого студента НЕ МАСИВА СТУДЕНТІВ.
 //  Оцінку округліть до 2ого знаку. Можна використовувати функції, написані у попередніх домашніх завданнях :)
+
+
+
+function getAverageMark (stud) {
+
+  let studen = Object.values(students[stud].subjects)
+
+
+
+console.log(studen)
+  // let result = studen.reduce((sum, current) => sum + current);
+
+ 
+}
+
+getAverageMark(0);
+
+
+ 
 
 // Створіть функцію getStudentInfo(students[0]) --> { "course": 3, "name": "Tanya", "averageMark": 3.79} – 
 // яка повертає інформацію загального виду по переданому студенту (вам знадобиться функція з попереднього завдання). 
