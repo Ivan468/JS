@@ -37,14 +37,20 @@ const students = [{
 
 function getSubjects(i) {
 
-  x = Object.assign(students[i].subjects);
+let  x = Object.assign(students[i].subjects);
  x =  Object.keys(x) ;
  x = x.join(', ')
   
  x = x.replace("_", " "); 
  x = x.split(', ')
+ 
+//  for (let i = 0; i < x.length; i++) {
+//    x[i] = x[i].toUpperCase() + x.slice(i);
+     
+//  }
+
 //  x = (x[0].toUpperCase() + x.slice(1))
- return console.log(x )
+ return console.log(x)
 }
 
 
