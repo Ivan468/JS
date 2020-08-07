@@ -2,9 +2,9 @@ const students = [{
     name: "Tanya",
     course: 3,
     subjects: {
-      math: [4, 4, 3, 4],
-      algorithms: [3, 3, 3, 4, 4, 4],
-      data_science: [5, 5, 3, 4],
+      math: [4, 4, 3, 4],//3.75
+      algorithms: [3, 3, 3, 4, 4, 4],//3.5
+      data_science: [5, 5, 3, 4],//4.25
        
     }
   }, {
@@ -67,30 +67,47 @@ getSubjects(2);
 
 function getAverageMark (stud) {
 
-  let studen = Object.values(students[stud].subjects)
+  let ocinki = Object.values(students[stud].subjects)
 
 
-// arr = [];
+let len = Object.values(students[stud].subjects).length;
+
+// console.log(len + " arr len");// = 3
+
+// console.log(ocinki[1].length + ' ocinki') // = 6
  
-   
 //   for(let j = 0; j < studen.length; j++) { 
      
 //     sum = studen  +  studen ;
 
-//    arr.push(sum);
-   
-let result = studen[0].reduce((sum, current) => sum + current);
+//    
+ let suma = 0;
 //   }
 
-result = result / studen[0].length ;
+for (let index = 0; index < len; index++) {
+  let result = ocinki[index].reduce((sum, current) => sum + current);
 
-console.log(result)
+
+result = result / ocinki[index].length ;
+ 
+  suma  = suma + result ;
+
+  
+}
+
+   
+
+
+
+return console.log(suma/len) ;
   // let result = studen.reduce((sum, current) => sum + current);
 
  
 }
 
+console.log( `Task 2 ----------- averge bal of Tanya`)
 getAverageMark(0);
+
 
 
  
