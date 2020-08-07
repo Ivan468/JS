@@ -59,16 +59,16 @@ console.log(`Третый студент: ${getSubjects(2)}`);
 //  Оцінку округліть до 2ого знаку. Можна використовувати функції, написані у попередніх домашніх завданнях :)
 
 function getAverageMark(stud) {
-  let ocinki = Object.values(students[stud].subjects);
+  let Mark = Object.values(students[stud].subjects);
 
   let len = Object.values(students[stud].subjects).length;
 
   let suma = 0;
 
   for (let index = 0; index < len; index++) {
-    let result = ocinki[index].reduce((sum, current) => sum + current);
+    let result = Mark[index].reduce((sum, current) => sum + current);
 
-    result = result / ocinki[index].length;
+    result = result / Mark[index].length;
 
     suma = suma + result;
   }
@@ -85,9 +85,9 @@ console.log(` averge bal of Anton: ${getAverageMark(2)}`);
 // яка повертає інформацію загального виду по переданому студенту (вам знадобиться функція з попереднього завдання).
 // ПОвинна бути виведена інформація: курс, ім'я, середня оцінка.
 function getStudentInfo(student) {
-  return `course: ${students[student].course}  name:   ${
+  return `Course: ${students[student].course} --- name: ${
     students[student].name
-  }    averageMark   ${getAverageMark(student)} `;
+  } --- Average Mark  ${getAverageMark(student)} `;
 }
 
 console.log(`  ${getStudentInfo(1)}`);
@@ -105,7 +105,7 @@ function getStudentsNames(index) {
   return studentName.sort().join(", ");
 }
 
-console.log(`sort ${getStudentsNames(0)}`);
+console.log(`Sort stusents -- ${getStudentsNames(0)}`);
 
 // Створіть функцію getBestStudent(students) --> "Anton" – яка повертає кращого студента зі списку по показнику середньої оцінки.
 
@@ -121,16 +121,16 @@ function getBestStudent(student) {
   return students[indexStudents].name;
 }
 
-console.log(`best students ${getBestStudent(0)}`);
+console.log(`Best students -> ${getBestStudent(0)}`);
 
 // Створіть функцію calculateWordLetters("тест") --> { "т": 2, "е": 1, "с": 1 } – яка повертає обє'кт, в якому ключі це букви у слові, а значення – кількість їх повторень.
 // debugger
-function calculateWordLetters( arr) {
-   arr = arr.split('');
+function calculateWordLetters(arr) {
+  arr = arr.split("");
   var arr2 = [];
 
   for (i in [...arr]) {
-    if (arr2[ arr[i]] != undefined) {
+    if (arr2[arr[i]] != undefined) {
       arr2[arr[i]]++;
     } else {
       arr2[arr[i]] = 1;
@@ -140,4 +140,4 @@ function calculateWordLetters( arr) {
   return console.log(arr2);
 }
 
- `тест цієї стрінги ${calculateWordLetters("тест цієї стрінги")}` ;
+`тест цієї стрінги ${calculateWordLetters("тест цієї стрінги")}`;
