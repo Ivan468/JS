@@ -99,7 +99,7 @@ result = result / ocinki[index].length ;
 
 
 
-return console.log(suma/len) ;
+return console.log((suma/len).toFixed(2)) ;
   // let result = studen.reduce((sum, current) => sum + current);
 
  
@@ -107,8 +107,10 @@ return console.log(suma/len) ;
 
 console.log( `Task 2 ----------- averge bal of Tanya`)
 getAverageMark(0);
-
-
+console.log( ` averge bal of Victor`)
+getAverageMark(1);
+console.log( ` averge bal of Anton`)
+getAverageMark(2);
 
  
 
