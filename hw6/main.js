@@ -46,11 +46,11 @@ function getSubjects(i) {
     return element[0].toUpperCase() + element.slice(1);
   });
 
-  return  x.join(", ");
+  return x.join(", ");
 }
- 
+
 console.log(`Перший студент: ${getSubjects(0)}`);
- 
+
 console.log(`Другий студент: ${getSubjects(1)}`);
 
 console.log(`Третый студент: ${getSubjects(2)}`);
@@ -76,57 +76,68 @@ function getAverageMark(stud) {
   return (suma / len).toFixed(2);
 }
 
- 
- console.log(`Task 2 ----------- averge bal of Tanya: ${getAverageMark(0)}`) ;
+console.log(`Task 2 ----------- averge bal of Tanya: ${getAverageMark(0)}`);
 console.log(` averge bal of Victor: ${getAverageMark(1)}`);
- 
+
 console.log(` averge bal of Anton: ${getAverageMark(2)}`);
- 
 
 // Створіть функцію getStudentInfo(students[0]) --> { "course": 3, "name": "Tanya", "averageMark": 3.79} –
 // яка повертає інформацію загального виду по переданому студенту (вам знадобиться функція з попереднього завдання).
 // ПОвинна бути виведена інформація: курс, ім'я, середня оцінка.
-function  getStudentInfo(student) {
-  return `course: ${students[student].course}  name:   ${students[student].name}    averageMark   ${getAverageMark(student)} `   
+function getStudentInfo(student) {
+  return `course: ${students[student].course}  name:   ${
+    students[student].name
+  }    averageMark   ${getAverageMark(student)} `;
 }
 
 console.log(`  ${getStudentInfo(1)}`);
 console.log(`  ${getStudentInfo(0)}`);
+console.log(`  ${getStudentInfo(2)}`);
 // Ствроіть функцію getStudentsNames(students) --> ["Anton", "Tanya, "Victor"] – яка повертає імена студентів у алфавітному порядку.
 
 function getStudentsNames(index) {
+  let studentName = [];
 
-let studentName = [];
+  for (let index = 0; index < students.length; index++) {
+    studentName.push(students[index].name);
+  }
 
-
- for (let index = 0; index < students.length; index++) {
-  studentName.push( students[index].name  );
-   
- }
-
- return studentName.sort().join(', ')
+  return studentName.sort().join(", ");
 }
 
-console.log(`sort ${getStudentsNames(0)}`)
+console.log(`sort ${getStudentsNames(0)}`);
 
 // Створіть функцію getBestStudent(students) --> "Anton" – яка повертає кращого студента зі списку по показнику середньої оцінки.
- 
 
-function getBestStudent(student)   {
-  
-let indexStudents = [];
+function getBestStudent(student) {
+  let indexStudents = [];
 
-for (let index = 0; index < students.length; index++) {
-  
-  indexStudents.push(+getAverageMark(index));
+  for (let index = 0; index < students.length; index++) {
+    indexStudents.push(+getAverageMark(index));
+  }
+
+  indexStudents = indexStudents.indexOf(Math.max(...indexStudents));
+
+  return students[indexStudents].name;
 }
 
-indexStudents = indexStudents.indexOf(Math.max(...indexStudents));
-
-return students[indexStudents].name;
-}
-
-console.log(`best students ${getBestStudent(0)}`)
-
+console.log(`best students ${getBestStudent(0)}`);
 
 // Створіть функцію calculateWordLetters("тест") --> { "т": 2, "е": 1, "с": 1 } – яка повертає обє'кт, в якому ключі це букви у слові, а значення – кількість їх повторень.
+// debugger
+function calculateWordLetters( arr) {
+   arr = arr.split('');
+  var arr2 = [];
+
+  for (i in [...arr]) {
+    if (arr2[ arr[i]] != undefined) {
+      arr2[arr[i]]++;
+    } else {
+      arr2[arr[i]] = 1;
+    }
+  }
+
+  return console.log(arr2);
+}
+
+ `тест цієї стрінги ${calculateWordLetters("тест цієї стрінги")}` ;
