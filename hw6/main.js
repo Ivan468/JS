@@ -94,6 +94,21 @@ console.log(`  ${getStudentInfo(1)}`);
 console.log(`  ${getStudentInfo(0)}`);
 // Ствроіть функцію getStudentsNames(students) --> ["Anton", "Tanya, "Victor"] – яка повертає імена студентів у алфавітному порядку.
 
+function getStudentsNames(index) {
+
+let studentName = [];
+
+
+ for (let index = 0; index < students.length; index++) {
+  studentName.push( students[index].name  );
+   
+ }
+
+ return studentName.sort().join(', ')
+}
+
+console.log(`sort ${getStudentsNames(0)}`)
+
 // Створіть функцію getBestStudent(students) --> "Anton" – яка повертає кращого студента зі списку по показнику середньої оцінки.
 
 // Створіть функцію calculateWordLetters("тест") --> { "т": 2, "е": 1, "с": 1 } – яка повертає обє'кт, в якому ключі це букви у слові, а значення – кількість їх повторень.
