@@ -110,5 +110,23 @@ let studentName = [];
 console.log(`sort ${getStudentsNames(0)}`)
 
 // Створіть функцію getBestStudent(students) --> "Anton" – яка повертає кращого студента зі списку по показнику середньої оцінки.
+ 
+
+function getBestStudent(student)   {
+  
+let indexStudents = [];
+
+for (let index = 0; index < students.length; index++) {
+  
+  indexStudents.push(+getAverageMark(index));
+}
+
+indexStudents = indexStudents.indexOf(Math.max(...indexStudents));
+
+return students[indexStudents].name;
+}
+
+console.log(`best students ${getBestStudent(0)}`)
+
 
 // Створіть функцію calculateWordLetters("тест") --> { "т": 2, "е": 1, "с": 1 } – яка повертає обє'кт, в якому ключі це букви у слові, а значення – кількість їх повторень.
