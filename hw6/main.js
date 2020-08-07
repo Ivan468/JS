@@ -77,11 +77,11 @@ function getAverageMark(stud) {
 }
 
  
- console.log(`Task 2 ----------- averge bal of Tanya ${getAverageMark(0)}`) ;
-console.log(` averge bal of Victor`);
-getAverageMark(1);
-console.log(` averge bal of Anton`);
-getAverageMark(2);
+ console.log(`Task 2 ----------- averge bal of Tanya: ${getAverageMark(0)}`) ;
+console.log(` averge bal of Victor: ${getAverageMark(1)}`);
+ 
+console.log(` averge bal of Anton: ${getAverageMark(2)}`);
+ 
 
 // Створіть функцію getStudentInfo(students[0]) --> { "course": 3, "name": "Tanya", "averageMark": 3.79} –
 // яка повертає інформацію загального виду по переданому студенту (вам знадобиться функція з попереднього завдання).
