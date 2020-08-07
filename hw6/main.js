@@ -86,7 +86,12 @@ console.log(` averge bal of Anton: ${getAverageMark(2)}`);
 // Створіть функцію getStudentInfo(students[0]) --> { "course": 3, "name": "Tanya", "averageMark": 3.79} –
 // яка повертає інформацію загального виду по переданому студенту (вам знадобиться функція з попереднього завдання).
 // ПОвинна бути виведена інформація: курс, ім'я, середня оцінка.
+function  getStudentInfo(student) {
+  return `course: ${students[student].course}  name:   ${students[student].name}    averageMark   ${getAverageMark(student)} `   
+}
 
+console.log(`  ${getStudentInfo(1)}`);
+console.log(`  ${getStudentInfo(0)}`);
 // Ствроіть функцію getStudentsNames(students) --> ["Anton", "Tanya, "Victor"] – яка повертає імена студентів у алфавітному порядку.
 
 // Створіть функцію getBestStudent(students) --> "Anton" – яка повертає кращого студента зі списку по показнику середньої оцінки.
