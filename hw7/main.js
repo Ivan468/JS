@@ -10,10 +10,18 @@ const litva = { tax: 0.15, middleSalary: 1509, vacancies: 1114 };
 
 
 function getMyTaxes (params) {
-    return console.log (this.tax*this.middleSalary)
+    return   ( this.tax*this.middleSalary  )
 }
 
+document.write ( `ІТ Спеціаліст в Україні заплатить : <b>
+   ${getMyTaxes.call(ukraine)} податку</b> <br>`
+)
 
-getMyTaxes.call(ukraine)
-
+document.write ( ` ІТ Спеціаліст в Латвії заплатить : <b>
+   ${getMyTaxes.call(latvia)} податку </b> <br>`
+)
+ 
+document.write ( `ІТ Спеціаліст в Литві заплатить : <b>
+   ${getMyTaxes.call(litva)} податку</b> <br>`
+)
 
