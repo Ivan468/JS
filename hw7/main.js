@@ -19,7 +19,7 @@ document.write ( `Якщо зарплата буде 2000 то ІТ праців
 //2
 
 function getMiddleTaxes  (params) {
-    return   ( this.tax*this.middleSalary  )
+    return   ( this.tax*this.middleSalary)
 }
 
 document.write ( `ІТ Спеціаліст в Україні заплатить : <b>
@@ -44,4 +44,24 @@ function getTotalTaxes  (params) {
 
 document.write ( `У Литві всі ІТ спеціалісти платять <b>
    ${getTotalTaxes.call(litva)} податку</b> <br>`
+)
+
+
+// Створіть функцію getMySalary(country) – яка буде писати в 
+// консоль об'єкт виду: { salary: number, taxes: number, profit: number } кожні 10 секунд. 
+// Значення salary – генеруйте випадковим чином у діапазоні 1500-2000. taxes – розраховується в залежності від вибраної країни та значення salary.
+// profit = salary - taxes;
+
+function getMySalary  (country) {
+let salary =   Math.floor(Math.random() * (2000 - 1500)) + 1500;
+
+let taxes = (this.tax*salary).toFixed(2);
+let  profit = (salary - taxes).toFixed(2);
+
+    return  (`  Пдаток: <b>${taxes} </b> Зарплата: <b> ${salary}</b> Чистий прибуток: <b> ${profit} </b>`)
+}
+
+
+document.write ( ` В Україні буде:   
+   ${getMySalary.call(ukraine)}   <br>`
 )
