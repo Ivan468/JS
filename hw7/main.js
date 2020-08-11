@@ -48,7 +48,7 @@ function getMySalary(country) {
   let taxes = (this.tax * salary).toFixed(2);
   let profit = (salary - taxes).toFixed(2);
 
-  return `  Пдаток: <b>${taxes} </b> Зарплата: <b> ${salary}</b> Чистий прибуток: <b> ${profit} </b>`;
+  return `  Пдаток: ${taxes}  Зарплата:  ${salary} Чистий прибуток:  ${profit} `;
 }
 
 
