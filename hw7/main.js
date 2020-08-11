@@ -34,3 +34,14 @@ document.write ( `ІТ Спеціаліст в Литві заплатить : <
    ${getMiddleTaxes.call(litva)} податку</b> <br>`
 )
 
+////3 скыльки платять у кожній країні
+
+
+
+function getTotalTaxes  (params) {
+    return  (this.tax*this.middleSalary *this.vacancies)
+}
+
+document.write ( `У Литві всі ІТ спеціалісти платять <b>
+   ${getTotalTaxes.call(litva)} податку</b> <br>`
+)
