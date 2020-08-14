@@ -5,7 +5,7 @@
 // 
 // 
 // 
-// 
+// "Студент 1го курсу Вищої Школи Психотерапії м.Одеса, Остап Родоманський Бендер"
 
 
 class Student {
@@ -14,11 +14,16 @@ class Student {
     this.fullName = fullName;
     this.course = course;
   }
+
+  getInfo(){
+
+    return  "Студент " + this.course + 'го курсу ' + this.university + " " + this.fullName  ;
+  }
 }
 
-const student = new Student(`Petrushchack Ivan`, `KOTA`, `6`);
+const student = new Student(`Петрущак Іван`, `Києвської православної богословської академії`, `6`);
 
-console.log("student", student);
+console.log(  student.getInfo());
 
 
  
