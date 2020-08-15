@@ -31,7 +31,15 @@ class Student {
     return (this.marksStudents = marksStudents);
   }
 
-  
+  get dismiss(){
+    // let a = null;
+         this.marksStudents = null ;
+         
+
+     Object.freeze( this.marksStudents);
+     
+     return   this.fullName + " був виключений із навчального закладу";
+  }
 
   getAverageMark() {
     let a = this.studMark;
@@ -42,7 +50,8 @@ class Student {
   }
   get studMark() {
     //   виводить на консоль оцінки
-    return this.marksStudents;
+    return  this.marksStudents;
+   
   }
 }
 
@@ -53,7 +62,7 @@ const student = new Student(
 );
 
 const studentTwo = new Student(
-  `Радоианський Петро`,
+  `Радоманський Петро`,
   `Львівської політехніки`,
   `2`
 );
@@ -63,14 +72,16 @@ console.log(student.getInfo());
 student.marks = [5, 4, 4, 5]; //   встановлюємо оцінки за допомогою сетера
 studentTwo.marks = [3, 2, 4, 5, 3, 5, 5, 3];
 
-console.log("Оцінки студента", student.studMark); //   виводимо оцінки за допомогою гетера
+console.log("Оцінки студента Івана", student.studMark); //   виводимо оцінки за допомогою гетера
 
 console.log("Середній бал", student.getAverageMark());
 
 
 console.log("Студент 2: " + studentTwo.getInfo());
 console.log("Середній бал другого студента: ", studentTwo.getAverageMark());
-
+console.log("Обнулити оцінки: " + studentTwo.dismiss);
+studentTwo.marks = [3, 2, 4, 5, 3, 5, 5, 3];
+console.log("Оцінки студента Петра", studentTwo.studMark);
 
 ///Створіть метод this.dismiss, який "виключить" студента. 
 // Після виклику цього методу – ставити студенту оцінки та отримувати їх більше не можна. 
