@@ -52,6 +52,12 @@ class Student {
     //  Object.defineProperty(this, "marksStudents", { configurable: false, writable: false });
     return this.fullName + " був виключений із навчального закладу";
   }
+
+  // get unfreze() {
+  //  this = Object.assign(this, {});
+
+  //   return 'Студента поновлено'
+  // }
 }
 
 const student = new Student(
@@ -79,8 +85,13 @@ console.log("Студент 2: " + studentTwo.getInfo());
 console.log("Середній бал другого студента: ", studentTwo.getAverageMark());
 console.log("Обнулити оцінки: " + studentTwo.dismiss);//Заморожуємо
 studentTwo.marks = [2, 3, 4]; ///оцынки заморожені не присвоюються
-console.log("Оцінки студента Петра", studentTwo.studMark); //виводимо оцінки Петра і показує "нуль"
-console.log("Фрізі", Object.isFrozen(studentTwo));
+console.log("Оцінки студента Петра не можуть бути присвоєні", studentTwo.studMark); //виводимо оцінки Петра і показує "нуль"
+// console.log("Фрізі", Object.isFrozen(studentTwo));
+
+console.log(" " + studentTwo.unfreze);
+studentTwo.marks = [2, 3, 4];
+console.log("Оцінки студента Петра  ", studentTwo.studMark);
+
 
 
 ///Створіть метод this.dismiss, який "виключить" студента.
