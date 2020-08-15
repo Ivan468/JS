@@ -31,6 +31,8 @@ class Student {
     return (this.marksStudents = marksStudents);
   }
 
+  
+
   getAverageMark() {
     let a = this.studMark;
 
@@ -50,10 +52,26 @@ const student = new Student(
   `6`
 );
 
+const studentTwo = new Student(
+  `Радоианський Петро`,
+  `Львівської політехніки`,
+  `2`
+);
+
 console.log(student.getInfo());
 
 student.marks = [5, 4, 4, 5]; //   встановлюємо оцінки за допомогою сетера
+studentTwo.marks = [3, 2, 4, 5, 3, 5, 5, 3];
 
 console.log("Оцінки студента", student.studMark); //   виводимо оцінки за допомогою гетера
 
-console.log(" getAverageMark", student.getAverageMark());
+console.log("Середній бал", student.getAverageMark());
+
+
+console.log("Студент 2: " + studentTwo.getInfo());
+console.log("Середній бал другого студента: ", studentTwo.getAverageMark());
+
+
+///Створіть метод this.dismiss, який "виключить" студента. 
+// Після виклику цього методу – ставити студенту оцінки та отримувати їх більше не можна. 
+// (Ніяких помилок, просто повертається завжди null замість масиву оцінок)
