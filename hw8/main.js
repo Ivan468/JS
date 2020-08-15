@@ -28,12 +28,10 @@ class Student {
   //    @param {number[]} marksStudents
   set marks(marksStudents) {
     //  встановлюємо оцінки
- if (Object.isFrozen(this)) {
-   return "Студент виключений"
- } else  return (this.marksStudents = marksStudents);
+    if (Object.isFrozen(this)) {
+      return "Студент виключений";
+    } else return (this.marksStudents = marksStudents);
   }
-
-  
 
   getAverageMark() {
     let a = this.studMark;
@@ -44,18 +42,15 @@ class Student {
   }
   get studMark() {
     //   виводить на консоль оцінки
-    return  this.marksStudents;
-   
+    return this.marksStudents;
   }
 
-  get dismiss(){
-    let a = this.marksStudents;
-         a = null ;
-         
+  get dismiss() {
+    this.marksStudents = null;
 
-       Object.freeze(this);
+    Object.freeze(this);
     //  Object.defineProperty(this, "marksStudents", { configurable: false, writable: false });
-     return   this.fullName + " був виключений із навчального закладу";
+    return this.fullName + " був виключений із навчального закладу";
   }
 }
 
@@ -80,14 +75,14 @@ console.log("Оцінки студента Івана", student.studMark); //   
 
 console.log("Середній бал", student.getAverageMark());
 
-
 console.log("Студент 2: " + studentTwo.getInfo());
 console.log("Середній бал другого студента: ", studentTwo.getAverageMark());
-console.log("Обнулити оцінки: " + studentTwo.dismiss);
-studentTwo.marks = [2, 3, 4];
-console.log("Оцінки студента Петра", studentTwo.studMark);
-console.log("Фрізі", Object.isFrozen(studentTwo)  );
- 
-///Створіть метод this.dismiss, який "виключить" студента. 
-// Після виклику цього методу – ставити студенту оцінки та отримувати їх більше не можна. 
+console.log("Обнулити оцінки: " + studentTwo.dismiss);//Заморожуємо
+studentTwo.marks = [2, 3, 4]; ///оцынки заморожені не присвоюються
+console.log("Оцінки студента Петра", studentTwo.studMark); //виводимо оцінки Петра і показує "нуль"
+console.log("Фрізі", Object.isFrozen(studentTwo));
+
+
+///Створіть метод this.dismiss, який "виключить" студента.
+// Після виклику цього методу – ставити студенту оцінки та отримувати їх більше не можна.
 // (Ніяких помилок, просто повертається завжди null замість масиву оцінок)
