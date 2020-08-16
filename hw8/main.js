@@ -18,10 +18,10 @@ class Student {
     );
   }
 
-  //    @param {number[]} marksStudents
+  
   set marks(marksStudents) {
     //  встановлюємо оцінки
-    if (this.dismisStud === true) {
+    if (this.dismisStud) {
       return "Студент виключений";
     } else return (this.marksStudents = marksStudents);
   }
@@ -30,7 +30,7 @@ class Student {
     let a = this.studMark;
 
     const arrAvg = (arr) => arr.reduce((a, b) => a + b, 0) / arr.length;
-    //    const b = a.forEach;
+ 
     return arrAvg(a); ///  a / a.length;
   }
   get studMark() {
@@ -41,7 +41,7 @@ class Student {
   get dismiss() {
     this.marksStudents = null;
     this.dismisStud = true;
-    // Object.freeze(this);
+    
     //  Object.defineProperty(this, "marksStudents", { configurable: false, writable: false });
     return this.fullName + " був виключений із навчального закладу";
   }
@@ -82,12 +82,10 @@ console.log(
   "Оцінки студента Петра не можуть бути присвоєні",
   studentTwo.studMark
 ); //виводимо оцінки Петра і показує "нуль"
-// console.log("Фрізі", Object.isFrozen(studentTwo));
+ 
 
 console.log(" " + studentTwo.unfreze);
 console.log("Ставимо оцінки Петру  ", (studentTwo.marks = [2, 3, 4]));
 console.log("Тепер оцінки студента Петра  ", studentTwo.studMark);
 
-///Створіть метод this.dismiss, який "виключить" студента.
-// Після виклику цього методу – ставити студенту оцінки та отримувати їх більше не можна.
-// (Ніяких помилок, просто повертається завжди null замість масиву оцінок)
+ 
