@@ -1,17 +1,10 @@
-//
-//
-//
-//
-//
-//
-//
-// "Студент 1го курсу Вищої Школи Психотерапії м.Одеса, Остап Родоманський Бендер"
-
 class Student {
   constructor(fullName, university, course) {
     this.university = university;
     this.fullName = fullName;
     this.course = course;
+
+    this.dismisStud = false;
   }
 
   getInfo() {
@@ -28,7 +21,7 @@ class Student {
   //    @param {number[]} marksStudents
   set marks(marksStudents) {
     //  встановлюємо оцінки
-    if (Object.isFrozen(this)) {
+    if (this.dismisStud === true) {
       return "Студент виключений";
     } else return (this.marksStudents = marksStudents);
   }
@@ -47,17 +40,17 @@ class Student {
 
   get dismiss() {
     this.marksStudents = null;
-
-    Object.freeze(this);
+    this.dismisStud = true;
+    // Object.freeze(this);
     //  Object.defineProperty(this, "marksStudents", { configurable: false, writable: false });
     return this.fullName + " був виключений із навчального закладу";
   }
 
-  // get unfreze() {
-  //  this = Object.assign(this, {});
+  get unfreze() {
+    this.dismisStud = false;
 
-  //   return 'Студента поновлено'
-  // }
+    return "Студента поновлено";
+  }
 }
 
 const student = new Student(
@@ -83,16 +76,17 @@ console.log("Середній бал", student.getAverageMark());
 
 console.log("Студент 2: " + studentTwo.getInfo());
 console.log("Середній бал другого студента: ", studentTwo.getAverageMark());
-console.log("Обнулити оцінки: " + studentTwo.dismiss);//Заморожуємо
-studentTwo.marks = [2, 3, 4]; ///оцынки заморожені не присвоюються
-console.log("Оцінки студента Петра не можуть бути присвоєні", studentTwo.studMark); //виводимо оцінки Петра і показує "нуль"
+console.log("Обнулити оцінки: " + studentTwo.dismiss); //Заморожуємо
+studentTwo.marks = [2, 3, 4]; ///оцынки  не присвоюються - студент виключений
+console.log(
+  "Оцінки студента Петра не можуть бути присвоєні",
+  studentTwo.studMark
+); //виводимо оцінки Петра і показує "нуль"
 // console.log("Фрізі", Object.isFrozen(studentTwo));
 
 console.log(" " + studentTwo.unfreze);
-studentTwo.marks = [2, 3, 4];
-console.log("Оцінки студента Петра  ", studentTwo.studMark);
-
-
+console.log("Ставимо оцінки Петру  ", (studentTwo.marks = [2, 3, 4]));
+console.log("Тепер оцінки студента Петра  ", studentTwo.studMark);
 
 ///Створіть метод this.dismiss, який "виключить" студента.
 // Після виклику цього методу – ставити студенту оцінки та отримувати їх більше не можна.
