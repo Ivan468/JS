@@ -31,3 +31,10 @@ document.body.children[0].insertAdjacentElement(`afterbegin`, box)
 BOX(); BOX(); BOX();BOX();BOX();BOX();BOX();BOX();BOX();BOX();
 BOX(); BOX(); BOX();BOX();BOX();BOX();BOX();BOX();BOX();BOX();
 BOX();BOX();BOX();BOX();BOX();
+
+
+function generateBlocksInterval()  {
+  setInterval(getRandomColor, 1000);
+}
+
+generateBlocksInterval() 
