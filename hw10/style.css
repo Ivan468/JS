@@ -15,4 +15,7 @@
     width: 70px;
     height: 100px;
     background-color: rgb(92, 206, 252);
+    display: flex;
+    place-items: center;
+    justify-content: center;
 }
