@@ -38,6 +38,7 @@ kbd {
   transition: all 0.07s;
   border: 3px solid rgba(84, 192, 255, 0.712);
   margin: 10px;
+  cursor: pointer;
 }
 
 .playing {
