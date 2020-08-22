@@ -1,21 +1,47 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
- 
+html {
+  background: url(./marco-assmann.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+body,
+html {
+  height: 100%;
+  display: grid;
+  padding: 0;
+  margin: 0;
+}
+
 .keys {
-    display: flex;
-   width: 100%;
-   justify-content: space-around;
-   margin-top: 15%;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin: auto;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 290px;
+}
+kbd {
+    font-size: 30px;
 }
 
 .key {
+  width: 70px;
+  height: 100px;
+  background-color: rgba(92, 207, 252, 0.534);
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  transition: all 0.07s;
+  border: 3px solid rgba(84, 192, 255, 0.712);
+  margin: 10px;
+}
 
-    width: 70px;
-    height: 100px;
-    background-color: rgb(92, 206, 252);
-    display: flex;
-    place-items: center;
-    justify-content: center;
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 10px #ffc600;
 }
