@@ -9,9 +9,13 @@ const BOX = () => {
   setInterval(() => {box.style.background = getRandomColor();}, 1000)
   document.body.children[0].insertAdjacentElement(`afterbegin`, box);
 };
+ 
+for (let index = 0; index < 25; index++) {
+  BOX();
+}
 
-BOX();BOX();BOX();BOX();BOX();
-BOX();BOX();BOX();BOX();BOX();
-BOX();BOX();BOX();BOX();BOX();
-BOX();BOX();BOX();BOX();BOX();
-BOX();BOX();BOX();BOX();BOX();
+// let i = 0;
+//  while (i < 25) {
+//   BOX();
+//   i++
+//  }
