@@ -10,7 +10,7 @@
 // (Якщо викликати getRandomChinese(4), отримаємо результат "촛궻簽紙" за 200ms
 
 const sign = Date.now().toString().slice(-5);
-
+var a = 23;
 const a = String.fromCharCode(sign);
 
 console.log("date", a);

@@ -9,12 +9,7 @@ class Student {
 
   getInfo() {
     return (
-      "Студент " +
-      this.course +
-      "го курсу " +
-      this.university +
-      " " +
-      this.fullName
+      `Студент ${this.course}го курсу ${this.university} ${this.fullName}`
     );
   }
 
@@ -72,11 +67,11 @@ studentTwo.marks = [3, 2, 4, 5, 3, 5, 5, 3];
 
 console.log("Оцінки студента Івана", student.studMark); //   виводимо оцінки за допомогою гетера
 
-console.log("Середній бал", student.getAverageMark());
+console.log(`Середній бал`, student.getAverageMark());
 
-console.log("Студент 2: " + studentTwo.getInfo());
+console.log(`Студент 2: ${studentTwo.getInfo()}`);
 console.log("Середній бал другого студента: ", studentTwo.getAverageMark());
-console.log("Обнулити оцінки: " + studentTwo.dismiss); //Заморожуємо
+console.log(`Обнулити оцінки: ${studentTwo.dismiss}`); //Заморожуємо
 studentTwo.marks = [2, 3, 4]; ///оцынки  не присвоюються - студент виключений
 console.log(
   "Оцінки студента Петра не можуть бути присвоєні",
