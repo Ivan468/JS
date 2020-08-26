@@ -11,34 +11,28 @@
 
 function getRandomChinese(length) {
   return new Promise((resolve) => {
-    
     let i = 0;
-    let a = "";
-    
-        while (i < length) {
-           
-            setTimeout(() => {  
-            
-            const sign = Date.now().toString().slice(-5);
-           
-             a = a + String.fromCharCode(sign);
-             resolve(a);
-             
-            }, 1000);
-            i++; 
-           
-          }
-        //   return a;
-       
+    let b = [];
 
-    
-   
+    while (i < length) {
+        
+      setTimeout(() => {
+        const sign = Date.now().toString().slice(-5);
+        let a = String.fromCharCode(sign);
+        b.push(a);
+      }, 1000);
+
+      i++;
+    }
+    // return a;
+    resolve(b);
     // return console.log(a);
   });
 }
 
-const  prom = getRandomChinese(4);
-console.log("prom", prom)
+const prom = getRandomChinese(4).then((b) => {
+   console.log(b); 
+});
 
 // .then((a) => {
 //     console.log(a);
