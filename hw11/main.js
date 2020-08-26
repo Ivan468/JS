@@ -9,8 +9,23 @@
 //  з китайськими ієрогліфами. Час роботи проміса має складати length * 50ms.
 // (Якщо викликати getRandomChinese(4), отримаємо результат "촛궻簽紙" за 200ms
 
-const sign = Date.now().toString().slice(-5);
+function getRandomChinese(length) {
+  let a = "";
+  let i = 0;
 
-const a = String.fromCharCode(sign);
+//   setInterval(() => {
+    
+//   }, 50);
 
-console.log("date", a);
+while (i < length) {
+    const sign = Date.now().toString().slice(-5);
+    i++;
+    a = a + String.fromCharCode(sign);
+   
+  };
+
+  return  a;
+}
+
+console.log(getRandomChinese(4));
+
