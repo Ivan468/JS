@@ -10,22 +10,38 @@
 // (Якщо викликати getRandomChinese(4), отримаємо результат "촛궻簽紙" за 200ms
 
 function getRandomChinese(length) {
-  let a = "";
-  let i = 0;
-
-//   setInterval(() => {
+  return new Promise((resolve) => {
     
-//   }, 50);
+    let i = 0;
+    let a = "";
+    
+        while (i < length) {
+           
+            setTimeout(() => {  
+            
+            const sign = Date.now().toString().slice(-5);
+           
+             a = a + String.fromCharCode(sign);
+             resolve(a);
+             
+            }, 1000);
+            i++; 
+           
+          }
+        //   return a;
+       
 
-while (i < length) {
-    const sign = Date.now().toString().slice(-5);
-    i++;
-    a = a + String.fromCharCode(sign);
+    
    
-  };
-
-  return  a;
+    // return console.log(a);
+  });
 }
 
-console.log(getRandomChinese(4));
+const  prom = getRandomChinese(4);
+console.log("prom", prom)
 
+// .then((a) => {
+//     console.log(a);
+// }
+
+// );
