@@ -9,26 +9,31 @@
 //  з китайськими ієрогліфами. Час роботи проміса має складати length * 50ms.
 // (Якщо викликати getRandomChinese(4), отримаємо результат "촛궻簽紙" за 200ms
 
+let timeO = Date.now();
+let timeLast = "";
 function getRandomChinese() {
-  return new Promise(num => {
-    setTimeout( () => {
-      +num(String.fromCharCode(Date.now().toString().slice(-5)))
-
-    }, 50)
+  return new Promise((num) => {
+    setTimeout(() => {
+      +num(String.fromCharCode(Date.now().toString().slice(-5)));
+    }, 50);
   });
 }
 
-
-async function myGenPasw (length) {
+async function myGenPasw(length) {
   let result = "";
   let i = 0;
-  while (i <length) {
+  while (i < length) {
     result += await getRandomChinese();
     i++;
+    timeLast = Date.now();
   }
-  return console.log(result);
+
+  function Time() {
+    let timeFull = timeLast - timeO;
+    return timeFull;
+  }
+
+  return console.log(`${result} ${Time()}`);
 }
 
 myGenPasw(4);
-
- 
