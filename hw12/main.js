@@ -84,8 +84,16 @@ function renderPlanets(users) {
       const actorElement = document.createElement(`div`);
       actorElement.className = 'actor';
      
+      let diam = user.diameter;
+
+      if (diam === `unknown`) { diam = `невідомо`};
+
       actorElement.innerHTML = `
        <h2> ${ user.name  }</h2>
+       <p><b>Diameter:</b> ${ diam  }</p>
+       <p><b>Population:</b> ${ user.population  }</p>
+       <p><b>Orbital period:</b> ${ user.orbital_period }</p>  
+       <p><b>Rotation period:</b> ${ user.rotation_period}</p> 
       `;
 
       container.append(actorElement);
