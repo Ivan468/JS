@@ -32,7 +32,7 @@ html {
  }
  
 
-.btn, .btn_two {
+.btn, .btn_two, .btn-next, .btn-prew {
      background-color: #000;
      color:  #fff;
     height: 80px;
@@ -52,7 +52,7 @@ html {
     padding: 10px;
 }
  
-.btn:hover, .btn_two:hover{
+.btn:hover, .btn_two:hover, .btn-next:hover, .btn-prew:hover{
     color: #255784;
     background: #2196f3;
     box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;

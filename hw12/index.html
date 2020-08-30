@@ -11,7 +11,9 @@
 
     <div class="flex">
       <button class="btn">Get Iformation Actors</button>
-      <button class="btn_two">Get Planets</button>
+     <div><button class="btn_two" style="width:auto;">Get Planets</button>
+       <button class=" btn-next"> Next</button>
+      <button class=" btn-prew"> Prew</button></div>  
     </div>
 
     <div class="actors"></div>
@@ -21,6 +23,9 @@
     <script>
       const kbd = document.querySelector(".btn");
       const kbdTwo = document.querySelector(".btn_two");
+      const butnNext = document.querySelector(".btn-next");
+      const butnPrew = document.querySelector(".btn-prew");
+
       kbd.addEventListener("click", function (e) {
         const audio = document.querySelector(`.audio`);
 
@@ -33,6 +38,15 @@
          
         getPlanets().then(renderPlanets);
       });
+     butnNext.addEventListener("click", function (e) {
+        
+        btnNext().then(renderPlanets);
+       });
+       butnPrew.addEventListener("click", function (e) {
+        
+        btnPrew().then(renderPlanets);
+       });
+
     </script>
   </body>
 </html>

@@ -20,9 +20,33 @@ function getPlanets() {
       return [];
   });
 }
+let currentPage = 1;
+function btnNext() {
+  
+  currentPage = ++currentPage;
+  return axios.get(BASE + `planets/?page=${currentPage}`)
+    .then((res) => {
+    return res;
+  }).catch((err) => {
+      console.dir( err);
+      return [];
+  });
+}
+
+function btnPrew() {
+  
+  currentPage = --currentPage;
+  return axios.get(BASE + `planets/?page=${currentPage}`)
+    .then((res) => {
+    return res;
+  }).catch((err) => {
+      console.dir( err);
+      return [];
+  });
+}
 
 // axios.get(`http://swapi.dev/api/people/1/`);
-// axios.get(`http://swapi.dev/api/planets/`);
+// axios.get(`http://swapi.dev/api/planets/`); data.next
 
 function renderActors(users) {
     // console.log(users);
