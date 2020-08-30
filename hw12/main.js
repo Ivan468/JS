@@ -17,10 +17,15 @@ function renderActors(users) {
 
     // console.log(users);
     const container = document.querySelector(`.actors`);
-
+    container.innerHTML =` `;
     users.forEach( async user => {
-        const userResult = await axios.get(user);
 
+      
+
+      if (user.includes('http') ) { user.replace(/http/, 'https');}
+
+        const userResult = await axios.get(user);
+        
         const actorElement = document.createElement(`div`);
         actorElement.className = 'actor';
        
