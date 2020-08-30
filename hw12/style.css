@@ -13,15 +13,11 @@ html {
     background: url(https://upload.wikimedia.org/wikipedia/ru/3/3e/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_Star_Wars_Jedi_Fallen_Order.jpg) no-repeat center center fixed;
     background-size: cover;
   }
-  
-
- 
-
 .actors {
     padding: 20px;
-    background: rgba(34, 146, 238, 0.068);
+    /* background: rgba(34, 146, 238, 0.329); */
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
     grid-auto-flow: row;
     gap: 20px;
 }
@@ -56,8 +52,8 @@ html {
 
 .actor {
     padding: 10px;
-    backdrop-filter: blur(5px);
-    background-color: rgba(37, 104, 228, 0.411);
+    /* backdrop-filter: blur(5px); */
+    background-color: rgba(37, 104, 228, 0.808);
 }
  
 .btn:hover, .btn_two:hover, .btn-next:hover, .btn-prew:hover{
@@ -77,5 +73,43 @@ html {
      
 }
 
- 
+ /* Background */
 
+ .C-3PO {
+     background-image:  url(https://vignette.wikia.nocookie.net/starwars/images/3/3f/C-3PO_TLJ_Card_Trader_Award_Card.png/revision/latest/top-crop/width/360/height/360?cb=20180121052644);
+     background-size: cover;
+     background-position-y: -60px;
+     background-position-x: 74px;
+     background-repeat: no-repeat;
+ }
+
+ .R2-D2 { background-image: url(./ico/hotpng.com.png);
+    background-size: auto;
+    background-position-y: -2px;
+    background-position-x: 125px;
+    background-repeat: no-repeat;
+ }
+
+
+ .Darth  { background-image: url(./ico/dart.png);
+    background-size: auto;
+    background-position-y: -2px;
+    background-position-x: 125px;
+    background-repeat: no-repeat;
+ }
+
+ 
+ .Han { background-image: url(./ico/ha-solo.png);
+    background-size: cover;
+    background-position-y: -45px;
+    background-position-x: 97px;
+    background-repeat: no-repeat;
+ }
+
+ .Chewbacca {
+    background-image: url(./ico/starwars_PNG14.png);
+    background-size: cover;
+    background-position-y: -45px;
+    background-position-x: 97px;
+    background-repeat: no-repeat;
+ }

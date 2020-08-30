@@ -67,10 +67,15 @@ function renderActors(users) {
         if (gender === `female`) {  gender = `<img  src="./ico/female.svg" alt="female">`   } ;
         if (gender === `n/a`   )  { gender = `<img  src="./ico/r2d2.svg" alt="droid">`   };
         if (gender === `none`) { gender = `<img  src="./ico/r2d2.svg" alt="droid">`   };
-        actorElement.innerHTML = `
+
+        const name = userResult.data.name;
+        
+
+
+        actorElement.innerHTML = ` <div class = "${name}">
          <h2> ${ userResult.data.name  }</h2>
          <p> <b>Birth year</b>  ${  userResult.data.birth_year  }</p>
-         <p> <b>Gender</b>  ${ gender }</p>
+         <p> <b>Gender</b>  ${ gender }</p></div>
         `;
 
         container.append(actorElement);
