@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTTP request</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <audio src="./audio/Preview.mp3" autoplay class="audio"> </audio>
-    
-    <div class="flex"><button class=" btn">Get Iformation Actors</button>
-        <button class=" btn_two">Get Planets</button>
-    </div>
-    
-    <div class="actors">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio src="./audio/Preview.mp3" autoplay class="audio"></audio>
 
-
+    <div class="flex">
+      <button class="btn">Get Iformation Actors</button>
+      <button class="btn_two">Get Planets</button>
     </div>
-   
+
+    <div class="actors"></div>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
     <script>
-        const kbd = document.querySelector(".btn");
-    kbd.addEventListener("click", function (e) {
-     
-    const audio = document.querySelector(`.audio`);
-   
-    if (!audio) return;
-     
-    audio.play();
-    getActorsOnFilms().then(renderActors);
-  })
-    
+      const kbd = document.querySelector(".btn");
+      const kbdTwo = document.querySelector(".btn_two");
+      kbd.addEventListener("click", function (e) {
+        const audio = document.querySelector(`.audio`);
+
+        if (!audio) return;
+
+        audio.play();
+        getActorsOnFilms().then(renderActors);
+      });
+      kbdTwo.addEventListener("click", function (e) {
+         
+        getPlanets().then(renderPlanets);
+      });
     </script>
-</body>
+  </body>
 </html>

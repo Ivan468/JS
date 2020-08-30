@@ -10,13 +10,21 @@ function getActorsOnFilms() {
   });
 }
 
+
+function getPlanets() {
+  return axios.get(BASE + `planets/`)
+    .then((res) => {
+    return res;
+  }).catch((err) => {
+      console.dir( err);
+      return [];
+  });
+}
+
 // axios.get(`http://swapi.dev/api/people/1/`);
 // axios.get(`http://swapi.dev/api/planets/`);
 
 function renderActors(users) {
-
-
-
     // console.log(users);
     const container = document.querySelector(`.actors`);
     container.innerHTML =` `;
@@ -37,4 +45,27 @@ function renderActors(users) {
 
         
     });
+}
+function renderPlanets(users) {
+   console.log(users.data.results);
+
+   users = users.data.results;
+  const container = document.querySelector(`.actors`);
+  container.innerHTML =` `;
+  users.forEach( async user => {
+    
+
+      // const userResult = await axios.get(user);
+      
+      const actorElement = document.createElement(`div`);
+      actorElement.className = 'actor';
+     
+      actorElement.innerHTML = `
+       <h2> ${ user.name  }</h2>
+      `;
+
+      container.append(actorElement);
+
+      
+  });
 }

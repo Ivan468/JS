@@ -32,14 +32,42 @@ html {
  }
  
 
-.btn {
-     
-    height: 50px;
-     
+.btn, .btn_two {
+     background-color: #000;
+     color:  #fff;
+    height: 80px;
     margin: 2%;
+    padding: 15px 30px;
+    color: #2196f3;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+    border: 0px;
 }
 
-.btn_two {
-    height: 50px;
-    margin: 2%;
+.actor {
+    padding: 10px;
 }
+ 
+.btn:hover, .btn_two:hover{
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: .5s;
+     cursor: pointer; 
+}
+
+.actor:hover{
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay:  .2s;
+    animation-timing-function : ease-in-out;
+     
+}
+
+ 
+
