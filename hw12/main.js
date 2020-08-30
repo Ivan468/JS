@@ -24,31 +24,24 @@ function renderActors(users) {
         const actorElement = document.createElement(`div`);
         actorElement.className = 'actor';
        
-
         actorElement.innerHTML = `
          <h3> ${user}</h3>
         `;
 
-    
         container.append(actorElement);
 
-
-
-         function getActors() {
+       function getActors() {     
             return axios.get(user)
               .then((res) => {
-              return res.data.name;
+              return   res.data.name;
             }).catch((err) => {
                 console.dir( err);
                 return [];
             });
           }
-
         // let actorOnFilm = axios.get(user);
         // console.log(actorOnFilm);
-        console.log(  getActors());
-          
-
+        console.dir(  getActors().then());
     });
 
 
