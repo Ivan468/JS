@@ -12,9 +12,6 @@ function getActorsOnFilms() {
 
 // axios.get(`http://swapi.dev/api/people/1/`);
 
-
-
-
 function renderActors(users) {
 
     console.log(users);
@@ -27,7 +24,8 @@ function renderActors(users) {
         actorElement.className = 'actor';
        
         actorElement.innerHTML = `
-         <h3> ${  userResult.data.name  }</h3>
+         <h3> ${ userResult.data.name  }</h3>
+         <p> <b>Birth year</b>  ${  userResult.data.birth_year  }</p>
         `;
 
         container.append(actorElement);
