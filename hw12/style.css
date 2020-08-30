@@ -26,6 +26,11 @@ html {
     gap: 20px;
 }
 
+.actors img{
+    width: 18px;
+    height: 18px;
+}
+
  .flex {
      display: flex;
      flex-wrap: wrap;

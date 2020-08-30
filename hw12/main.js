@@ -49,20 +49,28 @@ function btnPrew() {
 // axios.get(`http://swapi.dev/api/planets/`); data.next
 
 function renderActors(users) {
-    // console.log(users);
+    //  console.log(users);
     const container = document.querySelector(`.actors`);
     container.innerHTML =` `;
     users.forEach( async user => {
       user = user.replace(/^http:\/\//i, 'https://');
+
 
         const userResult = await axios.get(user);
         
         const actorElement = document.createElement(`div`);
         actorElement.className = 'actor';
        
+        let gender = userResult.data.gender;
+
+        if (gender == `male`) { gender = `<img src="./ico/gender-fluid.svg" alt="male">` } 
+        if (gender == `female`) {  gender = `<img  src="./ico/female.svg" alt="female">`   } 
+        if (gender == `n/a`)  { gender = `<img  src="./ico/r2d2.svg" alt="droid">`   }
+  
         actorElement.innerHTML = `
          <h2> ${ userResult.data.name  }</h2>
          <p> <b>Birth year</b>  ${  userResult.data.birth_year  }</p>
+         <p> <b>Gender</b>  ${ gender }</p>
         `;
 
         container.append(actorElement);
