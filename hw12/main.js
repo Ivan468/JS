@@ -11,10 +11,11 @@ function getActorsOnFilms() {
 }
 
 // axios.get(`http://swapi.dev/api/people/1/`);
+// axios.get(`http://swapi.dev/api/planets/`);
 
 function renderActors(users) {
 
-    console.log(users);
+    // console.log(users);
     const container = document.querySelector(`.actors`);
 
     users.forEach( async user => {
@@ -24,7 +25,7 @@ function renderActors(users) {
         actorElement.className = 'actor';
        
         actorElement.innerHTML = `
-         <h3> ${ userResult.data.name  }</h3>
+         <h2> ${ userResult.data.name  }</h2>
          <p> <b>Birth year</b>  ${  userResult.data.birth_year  }</p>
         `;
 
@@ -32,11 +33,4 @@ function renderActors(users) {
 
         
     });
-
-
 }
-
-
-
-
-getActorsOnFilms().then(renderActors);

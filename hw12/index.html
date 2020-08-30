@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <audio src="http://orcun.ninja/upload/sw.mp3" autoplay> </audio>
-   
-    <button class=" btn">Get Iformation</button>
+    <audio src="./audio/Preview.mp3" autoplay class="audio"> </audio>
+    
+    <div class="flex"><button class=" btn">Get Iformation Actors</button>
+        <button class=" btn_two">Get Planets</button>
+    </div>
+    
     <div class="actors">
 
 
@@ -17,5 +20,18 @@
    
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
+    <script>
+        const kbd = document.querySelector(".btn");
+    kbd.addEventListener("click", function (e) {
+     
+    const audio = document.querySelector(`.audio`);
+   
+    if (!audio) return;
+     
+    audio.play();
+    getActorsOnFilms().then(renderActors);
+  })
+    
+    </script>
 </body>
 </html>

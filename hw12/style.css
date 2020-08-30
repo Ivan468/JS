@@ -26,10 +26,20 @@ html {
     
 }
 
- 
+ .flex {
+     display: flex;
+     flex-wrap: wrap;
+ }
  
 
 .btn {
-    margin-top: 10%;
-    height: 20px;
+     
+    height: 50px;
+     
+    margin: 2%;
+}
+
+.btn_two {
+    height: 50px;
+    margin: 2%;
 }
