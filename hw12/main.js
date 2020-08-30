@@ -77,7 +77,7 @@ function renderPlanets(users) {
   const container = document.querySelector(`.actors`);
   container.innerHTML =` `;
   users.forEach( async user => {
-    
+      if (user.name == `unknown`) {return};
 
       // const userResult = await axios.get(user);
       
