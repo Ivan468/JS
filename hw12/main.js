@@ -15,14 +15,13 @@ function getActorsOnFilms() {
 
 function renderActors(users) {
 
+
+
     // console.log(users);
     const container = document.querySelector(`.actors`);
     container.innerHTML =` `;
     users.forEach( async user => {
-
-      
-
-      if (user.includes('http') ) { user.replace(/http/, 'https');}
+      user = user.replace(/^http:\/\//i, 'https://');
 
         const userResult = await axios.get(user);
         
