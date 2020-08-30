@@ -3,10 +3,33 @@
 }
 
 html, body {
-    margin: 0;
+    height: 100%;
+    display: grid;
     padding: 0;
+    margin: 0;
 }
 
+html {
+    background: url(https://upload.wikimedia.org/wikipedia/ru/3/3e/%D0%9E%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0_Star_Wars_Jedi_Fallen_Order.jpg) no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+
+ 
+
 .actors {
-    background: rgb(2, 105, 62);
+    padding: 20px;
+    background: rgba(34, 146, 238, 0.493);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-flow: row;
+    
+}
+
+ 
+ 
+
+.btn {
+    margin-top: 10%;
+    height: 20px;
 }
