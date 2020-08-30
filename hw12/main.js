@@ -20,28 +20,19 @@ function renderActors(users) {
     console.log(users);
     const container = document.querySelector(`.actors`);
 
-    users.forEach(user => {
+    users.forEach( async user => {
+        const userResult = await axios.get(user);
+
         const actorElement = document.createElement(`div`);
         actorElement.className = 'actor';
        
         actorElement.innerHTML = `
-         <h3> ${user}</h3>
+         <h3> ${  userResult.data.name  }</h3>
         `;
 
         container.append(actorElement);
 
-       function getActors() {     
-            return axios.get(user)
-              .then((res) => {
-              return   res.data.name;
-            }).catch((err) => {
-                console.dir( err);
-                return [];
-            });
-          }
-        // let actorOnFilm = axios.get(user);
-        // console.log(actorOnFilm);
-        console.dir(  getActors().then());
+        
     });
 
 
