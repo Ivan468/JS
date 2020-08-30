@@ -22,7 +22,7 @@ function getPlanets() {
 }
 let currentPage = 1;
 function btnNext() {
-  
+  if (currentPage >5) return;
   currentPage = ++currentPage;
   return axios.get(BASE + `planets/?page=${currentPage}`)
     .then((res) => {
@@ -34,7 +34,7 @@ function btnNext() {
 }
 
 function btnPrew() {
-  
+  if (currentPage <2) return;
   currentPage = --currentPage;
   return axios.get(BASE + `planets/?page=${currentPage}`)
     .then((res) => {
@@ -63,10 +63,10 @@ function renderActors(users) {
        
         let gender = userResult.data.gender;
 
-        if (gender == `male`) { gender = `<img src="./ico/gender-fluid.svg" alt="male">` } 
-        if (gender == `female`) {  gender = `<img  src="./ico/female.svg" alt="female">`   } 
-        if (gender == `n/a`)  { gender = `<img  src="./ico/r2d2.svg" alt="droid">`   }
-  
+        if (gender === `male`) { gender = `<img src="./ico/gender-fluid.svg" alt="male">` } ;
+        if (gender === `female`) {  gender = `<img  src="./ico/female.svg" alt="female">`   } ;
+        if (gender === `n/a`   )  { gender = `<img  src="./ico/r2d2.svg" alt="droid">`   };
+        if (gender === `none`) { gender = `<img  src="./ico/r2d2.svg" alt="droid">`   };
         actorElement.innerHTML = `
          <h2> ${ userResult.data.name  }</h2>
          <p> <b>Birth year</b>  ${  userResult.data.birth_year  }</p>
