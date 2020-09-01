@@ -1,16 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      display: flex;
+      padding: 0;
+      margin: 0;
+      justify-content: center;
+      align-items: center;
+    }
+
+    body {
+      background: center / cover no-repeat url(./download.png);
+    }
+
+    h1 {
+      margin: 25px;
+
+      padding: 20px;
+      border-radius: 50px;
+      background: #a353f3;
+      box-shadow: 20px 20px 60px #8b47cf, -20px -20px 60px #bb5fff;
+    }
+
+    .btn {
+      border: 0px;
+      border-radius: 50px;
+      background: #53f35e;
+      box-shadow: 20px 20px 60px #47cf50, -20px -20px 60px #5fff6c;
+      padding: 20px;
+      font-size: medium;
+    }
+
+    .btn:hover {
+        cursor: pointer;
+    }
+
+    .btn:active{
+        background: #0ecf1b;
+      
+    }
+  </style>
+  <body>
     <div class="generator">
-
-        
+      <h1 class="id"></h1>
     </div>
-
+    <button class="btn">Get ID</button>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>

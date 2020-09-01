@@ -5,10 +5,14 @@ function* gen() {
 }
 
 const myGen = gen();
+ 
 
-console.log(myGen.next());
-console.log(myGen.next());
-console.log(myGen.next());
-console.log(myGen.next());
+const kbd = document.querySelector(".btn");
+const ID = document.querySelector(`.id`);
+
+kbd.addEventListener("click", function (e) {
+return (ID.innerHTML = myGen.next().value )  ;
+
+});
 
  
