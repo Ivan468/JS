@@ -36,7 +36,7 @@ function* FontGenerator(value) {
 }
 const fontGenerator = FontGenerator(14);
 
-fontGenerator.next();
+fontGenerator.next("up");
 
 function renderFontUp() {
   document.querySelector(".text").style.fontSize = `${
