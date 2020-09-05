@@ -11,8 +11,8 @@ console.log(`${Math.max(...massive)} ціна найдорожчого това�
 console.log (`---==== HW 2 ---===`);////
 
 
-let N = +prompt("ведіть перше число");
-let M = +prompt("ведіть друге число (більше за перше)");
+let N = 3;// +prompt("ведіть перше число");
+let M = 12//+prompt("ведіть друге число (більше за перше)");
 
 while (isNaN(N) || isNaN(M)) {
   alert("Це не цифри!");
@@ -49,7 +49,7 @@ while (M > 999999 || N > 999999) {
 console.log(`${N} перше число`);
 console.log(`${M} дрруге число`);
 
-const isPaired = confirm(`Пропускати парні числа?`);
+const isPaired = true;
 
 let sum1 = 0;
 for (let i = N; i <= M; i++) {
@@ -206,9 +206,6 @@ const ukraine = { tax: 0.195, middleSalary: 1789, vacancies: 11476 };
 const latvia = { tax: 0.25, middleSalary: 1586, vacancies: 3921 };
 const litva = { tax: 0.15, middleSalary: 1509, vacancies: 1114 };
 
-// Створіть функцію getMyTaxes.call(country, salary) -> number; –
-// яка рахує скільки податків ви заплатите як IT-спеціаліст в якійсь з країн.
-// Функція повинна викликатись через call та працювати з даними через this
 
 function getMyTaxes(salary) {
   return salary * this.tax;
@@ -314,8 +311,6 @@ for (let index = 0; index < 25; index++) {
   BOX();
 }
 
-console.log (`---==== HW 10---===`);////
-
 
 console.log (`---==== HW 11---===`);////
 let timeO = Date.now();
@@ -347,9 +342,6 @@ async function myGenPasw(length) {
 
 myGenPasw(4);
 
-console.log (`---==== HW 12---===`);////
-
-console.log (`---==== HW 13---===`);////
 
 
-export default pow;
+// export default pow;
