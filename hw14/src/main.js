@@ -1,5 +1,12 @@
 console.log (`---==== HW 1 ---===`);
-console.log (`test`);
+const BANANAS = 15.678;
+const KIVI = 123.965;
+const APPLES = 90.2345;
+
+let massive = [BANANAS, KIVI, APPLES]; //створюємо масив
+
+console.log(`${Math.max(...massive)} ціна найдорожчого товару`); 
+
 // import  hw1 from "./hw1/main.js";
 console.log (`---==== HW 2 ---===`);////
 
@@ -345,4 +352,4 @@ console.log (`---==== HW 12---===`);////
 console.log (`---==== HW 13---===`);////
 
 
-export default MyRound100;
+export default pow;

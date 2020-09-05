@@ -50,5 +50,3 @@ console.log(`${netProfit.toFixed(2)} - чистий прибуток`);
 
 const even = (n) => !(n % 2); //виводжу парне число
 console.info(even(sum)); //виводжу парне число s і це правда
-
-export default hw1;
