@@ -164,6 +164,8 @@ getPairsAndThems(students, themes, 1);
 
 console.log (`---==== HW 5---===`);////
 
+console.log(`see HTML`);
+
 let getRandomArray = (length, min, max) => {
   let arrRandom = [];
 
@@ -201,7 +203,7 @@ function calculateWordLetters(arr) {
 `тест цієї стрінги ${calculateWordLetters("тест цієї стрінги")}`;
 
 console.log (`---==== HW 7---===`);////
-
+console.log(`see HTML`);
 const ukraine = { tax: 0.195, middleSalary: 1789, vacancies: 11476 };
 const latvia = { tax: 0.25, middleSalary: 1586, vacancies: 3921 };
 const litva = { tax: 0.15, middleSalary: 1509, vacancies: 1114 };
@@ -295,6 +297,7 @@ const studentTwo = new Student(
 console.log(student.getInfo());
 
 console.log (`---==== HW 9---===`);////
+console.log(`see HTML`);
 function getRandomColor() {
   return "#" + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
 }
