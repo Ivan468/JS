@@ -1,14 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Homework1</h1>
-</body>
-<script src="./main.js"></script>
-</html>
+  </head>
+  <style>
+     
+    .delivery-button-block {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 800;
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 950px;
+      margin: 0 auto;
+    }
 
- 
+    .theme--retro .delivery-icon {
+      width: 72px;
+      height: 50px;
+      background-image: url(./img/Delivery-icon-retro.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    background-position: center;
+    }
+    .tick-icon {
+      width: 28px;
+    height: 37px;
+      background-image: url(./img/Tick-icon-retro.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    background-position: center;
+      margin: 0px 5px;
+    }
+
+    .theme--retro .scooter-icon {
+      width: 45px;
+      height: 40px;
+      background-image: url(./img/Scooter-icon-retro.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    background-position: center;
+    }
+
+    .theme--hipster .delivery-icon {
+      width: 100px;
+      height: 50px;
+      background-image: url(./img/Delivery-icon-hipster.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    background-position: center;
+    }
+
+    .theme--hipster .scooter-icon {
+      width: 54px;
+      height: 50px;
+      background-image: url(./img/Scooter-hipster.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    background-position: center;
+    }
+
+    .theme--burton .delivery-icon {
+      width: 74px;
+      height: 50px;
+      background-image: url(./img/Delivery-icon-burton.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    background-position: center;
+    }
+
+    .theme--burton .scooter-icon {
+      width: 51px;
+      height: 60px;
+      background-image: url(./img/Scooter-icon-burton.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    background-position: center;
+    }
+
+    .delivery-button-block > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .delivery-button-block > div > p {
+
+    }
+  </style>
+  <body>
+    <h1>Testing block</h1>
+    <div class="theme--retro">
+      <div class="delivery-button-block">
+        <div>
+          <div class="delivery-icon"></div>
+          <p>Levering: 5-9 hverdage</p>
+          <div class="tick-icon"></div>
+        </div>
+        <div>
+          <div class="delivery-icon"></div>
+          <p>Levering: 2-4 hverdage</p>
+          <div class="tick-icon"></div>
+        </div>
+        <div>
+          <div class="scooter-icon"></div>
+          <p>Begge dele inkl. tracking og forsikring</p>
+          <div class="tick-icon"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>
