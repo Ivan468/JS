@@ -1351,50 +1351,52 @@ a.btn.btn-normal.btn-gallery {
 .fields-address2 {
     display: none;
 }
-
-.container-bookbottom {
-    width: 1200px;
-}
-
 .delivery-button-block {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-      justify-content: center;
-    font-size: 16px;
+    justify-content: center;
+    font-size: 14px;
     font-weight: 700;
     font-family: 'Lato';
+    max-width: 950px;
+    margin: 0 auto;
   }
 
   .theme--retro .delivery-icon {
-    width: 100px;
+    width: 84px;
     height: 50px;
     background-image: url(../img/retro/Delivery-icon-retro.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
   }
   .tick-icon {
-    width: 50px;
-    height: 50px;
+    width: 33px;
+    height: 37px;
     background-image: url(../img/retro/Tick-icon-retro.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
+    margin:  0px 5px;
   }
 
   .theme--retro .scooter-icon {
-    width: 54px;
-    height: 50px;
+    width: 45px;
+    height: 40px;
     background-image: url(../img/retro/Scooter-icon-retro.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
   }
 
   .theme--hipster .delivery-icon {
-    width: 100px;
-    height: 50px;
+    width: 89px;
+      height: 50px;
     background-image: url(../img/hipster/Delivery-icon-hipster.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
   }
 
   .theme--hipster .scooter-icon {
@@ -1402,7 +1404,8 @@ a.btn.btn-normal.btn-gallery {
     height: 50px;
     background-image: url(../img/hipster/Scooter-hipster.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
   }
 
   .theme--burton .delivery-icon {
@@ -1410,7 +1413,8 @@ a.btn.btn-normal.btn-gallery {
     height: 50px;
     background-image: url(../img/burton/Delivery-icon-burton.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
   }
 
   .theme--burton .scooter-icon {
@@ -1418,7 +1422,8 @@ a.btn.btn-normal.btn-gallery {
   height: 60px;
     background-image: url(../img/burton/Scooter-icon-burton.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
   }
 
   .delivery-button-block > div {
