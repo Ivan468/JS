@@ -1363,7 +1363,7 @@ a.btn.btn-normal.btn-gallery {
     margin: 0 auto;
   }
 
-  .theme--retro .delivery-icon {
+  .theme--retro .delivery-button-block .delivery-icon {
     width: 84px;
     height: 50px;
     background-image: url(../img/retro/Delivery-icon-retro.png);
@@ -1371,7 +1371,7 @@ a.btn.btn-normal.btn-gallery {
     background-size: contain;
     background-position: center;
   }
-  .tick-icon {
+  .delivery-button-block .tick-icon {
     width: 33px;
     height: 37px;
     background-image: url(../img/retro/Tick-icon-retro.png);
@@ -1381,7 +1381,7 @@ a.btn.btn-normal.btn-gallery {
     margin:  0px 5px;
   }
 
-  .theme--retro .scooter-icon {
+  .theme--retro .delivery-button-block .scooter-icon {
     width: 52px;
     height: 54px;
     background-image: url(../img/retro/Scooter-icon-retro.png);
@@ -1390,7 +1390,7 @@ a.btn.btn-normal.btn-gallery {
     background-position: center;
   }
 
-  .theme--hipster .delivery-icon {
+  .theme--hipster .delivery-button-block .delivery-icon {
     width: 85px;
       height: 50px;
     background-image: url(../img/hipster/Delivery-icon-hipster.png);
@@ -1399,7 +1399,7 @@ a.btn.btn-normal.btn-gallery {
     background-position: center;
   }
 
-  .theme--hipster .scooter-icon {
+  .theme--hipster .delivery-button-block .scooter-icon {
     width: 54px;
     height: 50px;
     background-image: url(../img/hipster/Scooter-hipster.png);
@@ -1408,7 +1408,7 @@ a.btn.btn-normal.btn-gallery {
     background-position: center;
   }
 
-  .theme--burton .delivery-icon {
+  .theme--burton .delivery-button-block .delivery-icon {
     width: 74px;
     height: 50px;
     background-image: url(../img/burton/Delivery-icon-burton.png);
@@ -1417,9 +1417,9 @@ a.btn.btn-normal.btn-gallery {
     background-position: center;
   }
 
-  .theme--burton .scooter-icon {
-      width: 51px;
-  height: 60px;
+  .theme--burton .delivery-button-block .scooter-icon {
+    width: 51px;
+    height: 60px;
     background-image: url(../img/burton/Scooter-icon-burton.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -1703,7 +1703,7 @@ a.btn.btn-normal.btn-gallery {
     font-size: 3.15vw;
     letter-spacing: unset;
 }
-			#product.hide-font:not(.standard-font) .burton div#text-message {
+#product.hide-font:not(.standard-font) .burton div#text-message {
     font-size: 2vw;
    letter-spacing: unset;
 }
@@ -1849,9 +1849,19 @@ letter-spacing:0.1px;
 	}
 	#customer-form .btn-normal {
     padding: 15px;
-width: 100%;
-
+    width: 100%;
 }
+
+.delivery-button-block .tick-icon {
+    width: 24px;
+    height: 37px;
+    background-image: url(../img/retro/Tick-icon-retro.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 0px 5px;
+}
+
 	.bb-custom-wrapper .bb-bookblock {
    min-height: calc((100vw - 60px) / (900 / 455))
 }
@@ -2002,5 +2012,14 @@ width: 100%;
 	.giftbooks__item .heading--tiny {
     font-size: 2rem;
 }
+
+.theme--hipster .delivery-button-block .scooter-icon, .theme--hipster .delivery-button-block .delivery-icon, 
+.theme--retro .delivery-button-block .scooter-icon, .theme--retro .delivery-button-block .delivery-icon,
+.theme--burton .delivery-button-block .scooter-icon, .theme--burton .delivery-button-block .delivery-icon {
+    display: none;
+}
+.delivery-button-block .tick-icon {
+    width: 20px;}
+
 }
 /**** Custom image css*****/

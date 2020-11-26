@@ -6,7 +6,6 @@
     <title>Document</title>
   </head>
   <style>
-     
     .delivery-button-block {
       display: flex;
       align-items: center;
@@ -19,31 +18,31 @@
       margin: 0 auto;
     }
 
-    .theme--retro .delivery-icon {
+    .theme--retro .delivery-button-block .delivery-icon {
       width: 72px;
       height: 50px;
       background-image: url(./img/Delivery-icon-retro.png);
       background-repeat: no-repeat;
       background-size: contain;
-    background-position: center;
+      background-position: center;
     }
-    .tick-icon {
+    .delivery-button-block  .tick-icon {
       width: 28px;
-    height: 37px;
+      height: 37px;
       background-image: url(./img/Tick-icon-retro.png);
       background-repeat: no-repeat;
       background-size: contain;
-    background-position: center;
+      background-position: center;
       margin: 0px 5px;
     }
 
-    .theme--retro .scooter-icon {
+    .theme--retro  .delivery-button-block .scooter-icon {
       width: 45px;
       height: 40px;
       background-image: url(./img/Scooter-icon-retro.png);
       background-repeat: no-repeat;
       background-size: contain;
-    background-position: center;
+      background-position: center;
     }
 
     .theme--hipster .delivery-icon {
@@ -52,7 +51,7 @@
       background-image: url(./img/Delivery-icon-hipster.png);
       background-repeat: no-repeat;
       background-size: contain;
-    background-position: center;
+      background-position: center;
     }
 
     .theme--hipster .scooter-icon {
@@ -61,7 +60,7 @@
       background-image: url(./img/Scooter-hipster.png);
       background-repeat: no-repeat;
       background-size: contain;
-    background-position: center;
+      background-position: center;
     }
 
     .theme--burton .delivery-icon {
@@ -70,7 +69,7 @@
       background-image: url(./img/Delivery-icon-burton.png);
       background-repeat: no-repeat;
       background-size: contain;
-    background-position: center;
+      background-position: center;
     }
 
     .theme--burton .scooter-icon {
@@ -79,7 +78,7 @@
       background-image: url(./img/Scooter-icon-burton.png);
       background-repeat: no-repeat;
       background-size: contain;
-    background-position: center;
+      background-position: center;
     }
 
     .delivery-button-block > div {
@@ -89,7 +88,17 @@
     }
 
     .delivery-button-block > div > p {
-
+    }
+    @media screen and (max-width: 767px) {
+      .delivery-button-block .tick-icon {
+        width: 24px;
+        height: 37px;
+        background-image: url(./img/Tick-icon-retro.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin: 0px 5px;
+      }
     }
   </style>
   <body>
