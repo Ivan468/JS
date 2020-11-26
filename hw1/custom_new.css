@@ -1356,7 +1356,7 @@ a.btn.btn-normal.btn-gallery {
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
     font-family: 'Lato';
     max-width: 950px;
@@ -1382,8 +1382,8 @@ a.btn.btn-normal.btn-gallery {
   }
 
   .theme--retro .scooter-icon {
-    width: 45px;
-    height: 40px;
+    width: 52px;
+    height: 54px;
     background-image: url(../img/retro/Scooter-icon-retro.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -1391,7 +1391,7 @@ a.btn.btn-normal.btn-gallery {
   }
 
   .theme--hipster .delivery-icon {
-    width: 89px;
+    width: 85px;
       height: 50px;
     background-image: url(../img/hipster/Delivery-icon-hipster.png);
     background-repeat: no-repeat;
@@ -1428,7 +1428,7 @@ a.btn.btn-normal.btn-gallery {
 
   .delivery-button-block > div {
     display: flex;
-    margin: 0 10px;
+    margin: 0 7px;
     justify-content: center;
     align-items: center;
     margin-bottom: 7px;
