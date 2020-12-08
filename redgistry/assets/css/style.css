@@ -423,8 +423,8 @@ header .logo img {
   background: #e83946;
   padding: 2.5rem 0.625rem 1.563rem;
   border-radius: 0.313rem;
-  width: 4.875rem;
-  height: 12.688rem;
+  width: 4.875em;
+  height: 13.688em;
   font-size: 0.875em;
   letter-spacing: 0.044rem;
   text-transform: uppercase;
@@ -862,7 +862,7 @@ footer form .form-control {
 footer form .btn {
   padding: 0.563rem 0.625rem;
   border-radius: 0.313rem;
-  min-width: 6.438rem;
+  min-width: 6.438em;
   margin-top: -0.625rem;
   font-size: 1em;
 }
