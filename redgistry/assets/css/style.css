@@ -39,8 +39,8 @@ ul, ul li, ol, ol li, dl, dl dt, dl dd {
   margin: 0; 
 }
 p { 
-  font-size: 1.125rem; 
-  line-height: 1.75rem; 
+  font-size: 1.125em; 
+  line-height: 1.75em; 
   color: #585858;
   letter-spacing: 0.047rem;
 }
@@ -58,8 +58,8 @@ p {
 }
 /* Heading Css */
 h1 {
-  font-size: 3.125rem;  
-  line-height: 3.125rem;
+  font-size: 3.125em;  
+  line-height: 1.125em;
   color: #E83946;
   margin-bottom: 2.188rem;
   letter-spacing: -0.056rem;
@@ -67,18 +67,18 @@ h1 {
 }
 
 h2 {
-  font-size: 2.25rem;  
+  font-size: 2.25em;  
   color: #000000;
-  line-height: 3rem;
+  line-height: 3em;
 }
 
 h3 {  
   color: #000000; 
-  font-size: 1.25rem;
+  font-size: 1.25em;
 }
 
 h4 {
-  font-size: 1.125rem;  
+  font-size: 1.125em;  
   color: #292929;
 }
 b {
@@ -110,7 +110,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="tel"]:focus,
   border-color: #253689;
 }
 label { 
-  font-size: 0.875rem;
+  font-size: 0.875em;
   cursor: pointer; 
   font-weight: normal; 
   color: #000; 
@@ -132,7 +132,7 @@ input[type="submit"], button {
   border: 0.063rem solid #EDEDED !important; 
   padding: 0.313rem 0.938rem; 
   color: rgba(0, 0, 0, 0.69); 
-  font-size: 1rem; 
+  font-size: 1em; 
   outline: medium none; 
   height: 2.813rem; 
   margin-bottom: 0.75rem; 
@@ -158,7 +158,7 @@ select {
   float: left; 
   width: 100%; 
   color: #939393; 
-  font-size: 1rem; 
+  font-size: 1em; 
   outline: medium none; 
   padding: 0.313rem 0.75rem;  
   height: 3rem; 
@@ -208,7 +208,7 @@ textarea:focus {
   margin-bottom: 6.875rem;
 }
 .top-title h2 {
-  font-size: 3.125rem;
+  font-size: 3.125em;
   color: #E83946;
   font-weight: 700;
   letter-spacing: 0.078rem;
@@ -235,7 +235,7 @@ textarea:focus {
   -moz-transition: background-color 1s, border-color 1s; 
   -o-transition: background-color 1s, border-color 1s; 
   transition: background-color 1s, border-color 1s;
-  font-size: 1.125rem; 
+  font-size: 1.125em; 
   border-radius: 0.375rem;
   box-shadow: none !important;
   letter-spacing: 0.056rem;
@@ -277,7 +277,7 @@ header .logo img {
 .header-right span {
   display: block;
   clear: both;
-  font-size: 1.125rem;
+  font-size: 1.125em;
   margin-bottom:0.625rem;
 }
 .navbar > ul {
@@ -290,7 +290,7 @@ header .logo img {
 }
 .navbar > ul > li a {
   display: inline-block;
-  font-size: 1.125rem;
+  font-size: 1.125em;
   color: #fff;  
   padding: 0.313rem 0;
   font-weight: 600;
@@ -335,13 +335,13 @@ header .logo img {
   vertical-align: middle;
   padding: 0 0.313rem;
   border: 0.063rem solid #FFFFFF;
-  line-height: 1.375rem;
+  line-height: 1.375em;
   width: 1.563rem;
   text-align: center;
   margin: 0 0.125rem;
 }
 .web-adjusted-links li a {
-  font-size: 0.875rem;
+  font-size: 0.875em;
   color: #fff;
 }
 .web-adjusted-links li.black {
@@ -385,10 +385,10 @@ header .logo img {
   border-radius: 0.313rem;
   width: 4.875rem;
   height: 12.688rem;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   letter-spacing: 0.044rem;
   text-transform: uppercase;
-  line-height: 1.063rem;
+  line-height: 1.063em;
   color: #fff;
   font-weight: 600;
   text-align: center;
@@ -431,7 +431,7 @@ header .logo img {
 .card-header .btn {
   width: 100%;
   text-align: left;
-  font-size: 1.563rem;
+  font-size: 1.563em;
   font-weight: bold;
   text-transform: none;
   padding: 0.5rem 2.813rem 0.5rem 1.875rem;
@@ -472,7 +472,7 @@ header .logo img {
   padding: 0 0 0 0.938rem;
 }
 .card-body ul li {
-  font-size: 0.938rem;
+  font-size: 0.938em;
   color: #585858;
   letter-spacing: 0.047rem;
   margin-bottom: 0.313rem;
@@ -567,20 +567,20 @@ header .logo img {
 }
 .news-item span {
   display: block;
-  font-size: 0.938rem;
+  font-size: 0.938em;
   color: #E83946;
   font-weight: 800;
   margin: 2.5rem 0 0.313rem;
 }
 .news-item h4 {
   display: block;
-  font-size: 1.875rem;
+  font-size: 1.875em;
   color: #585858;
   font-weight: bold;
   margin: 0 0 0.938rem;
 }
 .news-item p {
-  font-size: 0.938rem;
+  font-size: 0.938em;
   margin-bottom: 1.25rem;
 }
 nav .wp-pagenavi {
@@ -597,10 +597,10 @@ nav .wp-pagenavi .previouspostslink, nav .wp-pagenavi .page, nav .wp-pagenavi .c
   position: relative;
   display: block;
   padding: 0.35rem 0.75rem 0.5rem;
-  line-height: 1.25;
+  line-height: 1.25em;
   color: #007bff;
   background-color: #fff;
-  font-size: 1.375rem;
+  font-size: 1.375em;
   font-weight: bold;
   border: 0.125rem solid #D4494C;
   background: none;
@@ -623,7 +623,7 @@ nav .wp-pagenavi .previouspostslink:hover, nav .wp-pagenavi .page:hover, nav .wp
   justify-content: center;
 }
 .page-link {
-  font-size: 1.375rem;
+  font-size: 1.375em;
   font-weight: bold;
   border: 0.125rem solid #D4494C;
   background: none;
@@ -657,7 +657,7 @@ nav .wp-pagenavi .previouspostslink:hover, nav .wp-pagenavi .page:hover, nav .wp
   padding: 3.75rem 5rem;
 }
 .glossaire-item h3 {
-  font-size: 2.5rem;
+  font-size: 2.5em;
   color: #E83946;
   font-weight: bold;
   letter-spacing: 0.063rem;
@@ -668,8 +668,8 @@ nav .wp-pagenavi .previouspostslink:hover, nav .wp-pagenavi .page:hover, nav .wp
   margin: 0 2.188rem 0 -6.875rem;
 }
 .glossaire-item p, .glossaire-item ul li {
-  font-size: 0.938rem;
-  line-height: 1.75rem;
+  font-size: 0.938em;
+  line-height: 1.75em;
   color: #585858;
   letter-spacing: 0.047rem;
   margin-bottom:0.625rem;
@@ -694,7 +694,7 @@ nav .wp-pagenavi .previouspostslink:hover, nav .wp-pagenavi .page:hover, nav .wp
 }
 .news-banner span {
   display: block;
-  font-size: 0.938rem;
+  font-size: 0.938em;
   font-weight: bold;
   color: #585858;
   padding: 3.125rem 0 0;
@@ -729,8 +729,8 @@ blockquote {
   margin: 6.25rem auto 6.25rem;
   font-family: 'Georgia';
   color: #E83946;
-  font-size: 1.875rem;
-  line-height: 2.813rem;
+  font-size: 1.875em;
+  line-height: 2.813em;
   font-style: italic;
   letter-spacing: 0.047rem;
   text-align: center;
@@ -777,8 +777,8 @@ footer .logo {
 }
 footer p {
   color: #585858;
-  font-size: 0.938rem;
-  line-height: 1.625rem;
+  font-size: 0.938em;
+  line-height: 1.625em;
 }
 .socials li a:hover {
   opacity: 0.8;
@@ -790,7 +790,7 @@ footer .socials li {
   margin: 0 0.938rem 0 0;
 }
 footer h6 {
-  font-size: 1.125rem;
+  font-size: 1.125em;
   font-weight: bold;
   color: #585858;
   letter-spacing: 0.028rem;
@@ -802,7 +802,7 @@ footer form {
 }
 footer form .form-control {
   width: 10.188rem;
-  font-size: 0.938rem;
+  font-size: 0.938em;
   color: #585858;
   background: #ffffff !important;
   border-radius: 0.313rem;
@@ -813,10 +813,10 @@ footer form .btn {
   border-radius: 0.313rem;
   min-width: 6.438rem;
   margin-top: -0.625rem;
-  font-size: 1rem;
+  font-size: 1em;
 }
 .contact-block {
-  font-size: 0.938rem;
+  font-size: 0.938em;
   margin-bottom: 0.313rem;
   color: #585858;
 }
@@ -825,7 +825,7 @@ footer form .btn {
   padding: 3.125rem 0 0;
   text-align: center;  
   margin: 5.313rem 0 0;
-  font-size: 0.938rem;
+  font-size: 0.938em;
   color: #585858;
   letter-spacing: 0.047rem;
 }
@@ -836,7 +836,7 @@ footer form .btn {
   margin-bottom: 0.938rem;
 }
 .quick-links li a {
-  font-size: 1.125rem;
+  font-size: 1.125em;
   font-weight: bold;
   color: #585858;
 }

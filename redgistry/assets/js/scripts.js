@@ -39,7 +39,7 @@ function makeTimer() {
 
 $('#increasetext').click(function() {
   curSize = parseInt($('#content').css('font-size')) + 2;
-  if (curSize <= 42)
+  if (curSize <= 32)
     $('#content').css('font-size', curSize);
 });
 
