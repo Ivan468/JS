@@ -361,16 +361,15 @@ header .logo img {
   background: blue;
   color: white;
   border: 1px solid white;
- }
- 
- .black-btn {
+}
+
+.black-btn {
   background: black;
   color: white;
   border: 1px solid white;
- }
+}
 
 .web-adjusted-links li {
- 
   display: inline-block;
   vertical-align: middle;
   /* padding: 0 0.313rem; */
@@ -898,6 +897,10 @@ footer form .btn {
   display: none;
 }
 
+#content div.web-adjusted-links ul button {
+  width: 100%;
+}
+
 .blue-bg,
 .blue-bg p,
 .blue-bg h1,
@@ -947,9 +950,7 @@ footer form .btn {
 .black-bg .accordion,
 .black-bg .card-body,
 .black-bg .black-color,
-.black-bg .about-us
-
-{
+.black-bg .about-us {
   background: black;
   color: white;
 }
