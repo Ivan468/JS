@@ -1,0 +1,637 @@
+@media screen and (max-width:1366px) {
+  .form-wrap {
+    padding: 5rem 4.375rem;
+  }
+  .before-shape {
+    background-position: 35% -5rem;
+  }
+}
+@media screen and (max-width:1199px) {
+  .launch-counter [class*="col-"] {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .section-title {
+    font-size: 2.5rem;
+  }
+  .participate-form h2 span {
+    font-size: 0.938rem;
+  }
+  .form-wrap {
+    padding: 4.375rem 3.75rem;
+  }
+  .btn {
+    padding: 0.75rem 1.875rem;
+    font-size: 1rem;
+  }
+  footer {
+    padding: 3.125rem;
+  }
+  .live-session iframe {
+    width: 100%;
+    height: 31.25rem;
+  }
+  .accordion {
+    padding: 0 2.5rem;
+  }
+  .socials {
+    margin-right: 0.625rem;
+  }
+  .navbar ul {
+    padding: 0.5rem 0;
+  }
+  .news-block .top-title {
+    margin-bottom: 3.438rem;
+  }
+  .news-banner .space {
+    padding-left: 3.125rem;
+  }
+}
+@media screen and (max-width:991px) {
+  .navbar > ul {
+    padding: 0.188rem 0.625rem;
+  }
+  .navbar > ul > li > a {
+    padding: 0.938rem 1.438rem;
+    font-size: 1.563rem;
+    color: #585858;
+    font-weight: bold;
+  }
+  .navbar > ul > li > a:hover {
+    color: #E83946;
+  }
+  h1, .banner-caption h2 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  .banner-caption big, .banner-caption small {
+    font-size: 1.125rem;
+    line-height: 1.25rem;  
+  }
+  .launch-counter {
+    padding: 1.563rem 0;
+  }
+  .counter-block h2 {
+    font-size: 2.5rem;
+    line-height: 1rem;
+  }
+  .counter-block span {
+    font-size: 0.813rem;
+  }
+  .counter-block:after {
+    top: 0;
+  }
+  .section-title {
+    font-size: 2.25rem;
+  }
+  .programs-listing {
+    padding-top: 3.75rem;
+    padding-bottom: 2.5rem;
+  }
+  .programe-list {
+    margin-bottom: 1.25rem;
+  }
+  .programs-listing a {
+    font-size: 1.375rem;
+    line-height: 1.875rem;
+  }
+  .programs-listing .right-content {
+    padding-left: 3.125rem;
+  }
+  .programs-listing .right-content::before {
+    left: 1.25rem;
+    width: 0.625rem;
+    height: 0.625rem;
+  }
+  .our-experts .row {
+    margin: 0 -0.938rem;
+  }
+  .our-experts [class*="col-"] {
+    padding: 0 0.938rem;
+  }
+  .our-experts h3 {
+    font-size: 1.625rem;
+  }
+  .programs-listing, .our-experts {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .our-experts {
+    padding-bottom: 3.125rem;
+  }
+  .our-experts {
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+  }
+  .our-experts .row [class*="col-"] {
+    margin-bottom: 1.875rem;
+  }
+  .parallax-bg {
+    min-height: 31.25rem;
+  }
+  .form-wrap {
+    padding: 3.125rem 2.5rem;
+  }
+  footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .top-footer{
+    padding: 2.5rem 0;
+  }
+  .copyright {
+    padding: 1.25rem 0;
+  }
+  .live-session iframe {
+    height: 25rem;
+  }
+  .live-session {
+    padding: 2.5rem 0;
+  }
+
+   /* 11-18-2020 Css start */
+  header .logo {
+    text-align: left;
+  }
+  .header-right {
+    top: 2.188rem;
+  }
+
+   /* 11-18-2020 Css End */
+
+   .before-shape {
+    background-size: 20.625rem;
+   }
+   .about-inner {
+    padding-top: 11.875rem;
+   }
+   .about-inner .top-title {
+    margin-bottom: 2.5rem;
+   }
+   .accordion {
+    padding: 0;
+   }
+   .card-body {
+    padding: 2.188rem;
+   }
+   .video-poster {
+    padding: 0 1.25rem;
+   }
+   header {
+    position: relative;
+    padding: 0.625rem 0;
+   }
+   .menu-toggle {
+    display: block;
+  }
+  .navbar {
+    transform: translateX(20rem);
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    z-index: 111;
+    width: 100%;
+    height: calc(100vh - 3.625rem);
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: flex-start;
+    display: block;
+    overflow-y: auto;
+    text-align: center;
+    padding-bottom: 1.25rem; 
+  }
+  .navbar.show {
+    transform: translateX(0);
+    right: 0;
+  }
+  .web-adjusted-links {
+    margin-bottom: 1.25rem;
+  }
+  .navbar.show .socials li img.mobile-show {
+    display: block;
+  }
+  .socials li img {
+    width: auto;
+  }
+  .navbar.show .socials li img {
+    display: none;
+  }
+  .navbar .socials {
+    padding: 1.25rem 0;
+  }
+  .navbar .socials li {
+    margin: 0 0.375rem;
+  }
+  .navbar > ul > li {
+    display: block;
+    text-align: center;
+  }
+  .web-adjusted-links li {
+    border: 0.063rem solid #585858;
+    line-height: 2.563rem;
+    width: 2.813rem;
+  }
+  .web-adjusted-links li a {
+    color: #585858;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .web-adjusted-links li.black a {
+    color: #fff;
+  }
+  .web-adjusted-links li.blue a {
+    color: #FFDD6A;
+  }
+  .manage-page {
+    overflow: hidden !important;
+  }
+  .manage-page .menu-toggle span:nth-child(2) {
+    display: none;
+  }
+  .manage-page .menu-toggle span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  .manage-page .menu-toggle span:nth-child(3) {
+   transform: rotate(-45deg);
+   margin-top: -0.688rem;
+  }
+  .page-link, nav .wp-pagenavi .previouspostslink, nav .wp-pagenavi .nextpostslink, nav .wp-pagenavi .page, nav .wp-pagenavi .current {
+    margin: 0 0.125rem;
+    padding: 0.375rem 0.625rem;
+  }
+  .pagination {
+    margin-bottom: 3.125rem;
+  }
+  .news-block [class*="col-"]  {
+    padding-bottom: 2.188rem;
+  }
+  .news-banner .space {
+    padding-left: 0;
+  }
+  .news-banner span {
+    padding-top: 0.938rem;
+  }
+  .news-banner.before-shape {
+    background-position: 120% -11.25rem;
+  }
+  .detail-template .news-details {
+    padding: 5rem 0;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .top-title {
+    margin-bottom: 1.875rem;
+  }
+  .top-title h2 {
+    font-size: 2.25rem;
+  }
+  .glossaire-item h3 {
+    font-size: 1.875rem;
+  }
+  .glossaire-item {
+    padding: 2.188rem 2.813rem;
+  }
+  .glossaire-item h3 img {
+    margin: 0 0.875rem 0 -3.75rem;
+    max-width: 2.813rem;
+  }
+  .glossaire-block {
+    padding-top: 3.125rem;
+    padding-bottom: 0.625rem;
+  }
+  .banner-caption {
+    padding: 1.25rem 1.875rem 1.875rem;
+  }
+  h1, .banner-caption h2 {
+    font-size: 1.875rem;
+    line-height: 2.125rem;
+  }
+  .banner-caption p {
+    line-height: 1.375rem;
+  }
+  .container {
+    max-width: 33.75rem !important;
+  }
+  .launch-counter {
+    padding: 1.875rem 0 0;
+  }
+  .launch-counter [class*="col-"] {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-bottom: 1.875rem;
+  }
+  .counter-block:after {
+    display: none;
+  }
+  .programs-listing, .our-experts {
+    padding: 2.5rem 0;
+  }
+  .programs-listing {
+    padding-bottom: 1.563rem;
+  }
+  .our-experts {
+    padding-bottom: 1.25rem;
+  }
+  .section-title {
+    margin-bottom: 1.563rem;
+    font-size: 1.875rem;
+  }
+  .programs-listing a {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+  .programs-listing .float-left {
+    padding-top: 0;
+  }
+  .programs-listing .right-content {
+    padding: 0.813rem 2.5rem;
+  }
+  .programs-listing .right-content::before {
+    width: 0.5rem;
+    height: 0.5rem;
+    left: 1rem;
+    top: 1.375rem;
+  }
+  .programe-list {
+    margin-bottom: 0.938rem;
+  }
+  .our-experts .section-title {
+    margin-bottom: 0.938rem;
+  }
+  .our-experts h3 {
+    font-size: 1.375rem;
+  }
+  .our-experts .float-left {
+    width: 8.75rem;
+    height: 8.75rem;
+  }
+  .our-experts .right-content {
+    width: calc(100% - 8.75rem);
+    padding-left: 1.25rem;
+  }
+  .our-experts h5 {
+    font-size: 1.125rem;
+  }
+  .our-experts p, p {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+  .our-experts .row [class*="col-"] {
+    margin-bottom: 1.25rem;
+  }
+  .parallax-bg {
+    min-height: 25rem;
+  }
+  .form-wrap {
+    padding: 1.875rem;
+  }
+  form {
+    margin: 0;
+  }
+  form button {
+    float: none;
+    margin-top: 0.625rem;
+  }
+  form [class*="col-"].mt-4 {
+    margin-top: 0.625rem !important;
+  }
+  .top-footer {
+    padding: 1.25rem 0;
+  }
+  .top-footer .logo img {
+    max-width: 11.25rem;
+  }
+  header {
+    position: relative;
+  }
+  header .logo {
+    display: inline-block;
+  }
+  header .logo img {max-width: 9.125rem;}
+  .covid-info span {
+    font-size: 1.375rem;
+  }
+  .video-wrap {
+    padding: 2.5rem 0;
+  }
+  .video-wrap iframe {
+    height: 21.875rem;
+  }
+  .counter-block h2 span {
+    font-size: 0.875rem;
+  }
+  .caption-wrap {
+    width: 100%;
+  }
+  .live-session {
+    padding: 1.875rem 0 0.938rem;
+  }
+  .live-session iframe {
+    margin-bottom: 1.25rem;
+  }
+
+ /* 11-18-2020 Css start */
+  header .container {
+    max-width: 100% !important;
+  }
+  .menu-toggle {
+    right: 0.938rem;
+  }
+  .header-right {
+    top: 0.625rem;
+    right: 6.25rem;
+  }
+  .header-right .btn {
+    font-size: 0.875rem;
+    padding: 0.625rem 1.25rem;
+  }
+
+   /* 11-18-2020 Css End */
+
+   .before-shape {
+    background-position: -13.125rem -9.375rem;
+   }
+   .top-banner h1 {
+    padding-top: 0;
+    margin-bottom: 0.938rem;
+    font-size: 2.188rem;
+   }
+   .top-banner {
+    padding-top: 3.125rem;
+    padding-bottom: 7.5rem;
+   }
+   .top-banner .btn {
+    margin-top: 1.875rem;
+   }
+   .about-img {
+    top: -4.688rem;
+    right: 0.938rem;
+    left: 0.938rem;
+    margin: 0 auto;
+   }
+   .about-inner {
+    padding-top: 13.75re,;
+   }
+   .about-us .before-shape {
+    background-position: -4.375rem -3.75rem;
+   }
+   .card-body {
+    flex-direction: column;
+    padding: 2.375rem 1.625rem !important;
+   }
+   .content-left {
+    width: 100%;
+    order: 2;
+    padding-top: 2.188rem;
+   }
+   .about-inner .container {
+    padding: 0;
+   }
+   .media-block {
+    padding: 4.688rem 0;
+   }
+   .black-color.before-shape {
+    background-position: -3.75rem -6.875rem;
+   }
+   .video-poster {
+    padding: 0;
+   }
+   .media-block .top-title {
+    margin-bottom: 3.438rem;
+   }
+   .play-btn {
+    width: 5.813rem;
+    height: 5.813rem;
+   }
+   .news-block .top-title {
+    margin-bottom: 1.875rem;
+   }
+   .news-block {
+    padding-top: 4.063rem;
+   }
+   .news-block .top-title .btn {
+    display: none;
+   }
+   .copyright span {
+    display: none;
+   }
+   .logos-block {
+    margin-bottom: 0;
+   }
+   .logos-block .col-md-2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    padding: 0;
+   }
+   .quick-links {
+    margin-bottom: 2.813rem;
+   }
+   footer .socials {
+    margin-top: 2.813rem;
+   }
+   footer {
+    text-align: center;
+    padding-bottom: 0.938rem; 
+   }
+   footer form .form-control {
+    width: 100%;
+    margin-right: 0;
+   }
+   footer form .btn {
+    width: 100%;
+    margin-top: 0;
+   }
+   footer form {
+    flex-direction: column;
+   }
+   .copyright {
+    margin-top: 3.125rem;
+   }
+   .accordion > .card {
+    background-color: transparent;
+   }
+   .images-block {
+    margin: 2.5rem 0
+   }
+   .images-block img {
+    margin: 0.938rem 0;
+   }
+   blockquote br {
+    display: none;
+   }
+   blockquote {
+    padding: 0 4.375rem;
+   }
+}
+
+ /* 11-18-2020 Css start */
+@media screen and (max-width:575px) {
+  .top-title h2 {
+    font-size: 2.188rem;
+    line-height: 2.5rem;
+  }
+  .about-inner .top-title {
+    margin-bottom: 1.563rem;
+  }
+  .about-inner {
+    padding-top: 12.188rem;
+  }
+  .about-img {
+    left: 0;
+    right: 0;
+    width: 90%;
+  }
+  .card-header .btn {
+    font-size: 1rem;
+    padding: 0.938rem 2.813rem 0.938rem 1.875rem;
+  }
+  .glossaire-item {
+    padding: 1.875rem;
+  }
+  .glossaire-item h3 {
+    font-size: 1.5rem;
+  }
+  .glossaire-item h3 img {
+    margin: 0 0.375rem 0 -2.5rem;
+    max-width: 2rem;
+  }
+  blockquote {
+    margin: 3.125rem auto;
+  }
+  .news-banner img {
+    margin-bottom: 0.625rem;
+  }
+  .news-banner .space {
+    padding-left: 0.938rem;
+  }
+  .detail-template .top-banner {
+    padding-bottom: 2.5rem;
+  }
+  .detail-template .news-details {
+    padding: 3.438rem 0;
+  }
+  blockquote {
+    padding: 1.563rem 0;
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+  }
+  blockquote::before, blockquote::after {
+    width: 2.5rem;
+    height: 2.063rem;
+    background-size: cover;
+    top: -1.875rem;
+  }
+  blockquote::after {
+   background-size: cover;
+    bottom: -1.875rem;
+    top: auto; 
+  }
+}
+ /* 11-18-2020 Css End */
