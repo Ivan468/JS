@@ -360,14 +360,22 @@ header .logo img {
 .blue-btn {
   background: blue;
   color: white;
-  border: 1px solid white;
 }
 
 .black-btn {
   background: black;
   color: white;
-  border: 1px solid white;
 }
+
+#increasetext, #decreasetext, #resettext {
+  background: none;
+  color: white;
+  width: 1.9em;
+  height: 25px;
+  font-size: 0.879em;
+  padding: 1px;
+ }
+ 
 
 .web-adjusted-links li {
   display: inline-block;
@@ -897,9 +905,9 @@ footer form .btn {
   display: none;
 }
 
-#content div.web-adjusted-links ul button {
+/* #content div.web-adjusted-links ul button {
   width: 100%;
-}
+} */
 
 .blue-bg,
 .blue-bg p,
