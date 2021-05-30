@@ -4,7 +4,8 @@ const APPLES = 90.2345;
 
 let massive = [BANANAS, KIVI, APPLES]; //створюємо масив
 
-console.log(`${Math.max(...massive)} ціна найдорожчого товару`); //виводимо максимальне і мінімальне число із масиву
+console.log(`${Math.max(...massive)} ціна найдорожчого товару`); //виводимо
+// максимальне і мінімальне число із масиву
 console.log(`${Math.min(...massive)} ціна найдешевшого товару  `);
 
 let sum = BANANAS + KIVI + APPLES; //вивести суму із 3х товарів
@@ -50,3 +51,13 @@ console.log(`${netProfit.toFixed(2)} - чистий прибуток`);
 
 const even = (n) => !(n % 2); //виводжу парне число
 console.info(even(sum)); //виводжу парне число s і це правда
+
+// тест Петриченка
+
+const obj = {
+  a: 10,
+};
+
+obj.a = 20;
+
+console.log(obj);
